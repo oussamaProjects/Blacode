@@ -1,0 +1,343 @@
+ 
+/*******************************    PROCESSUS  */
+.Processus{ 
+
+	.titre {
+		color: $main_color;
+		font-size: oe_rem(48px);    
+		line-height: oe_rem(60px);
+		margin: oe_rem(20px) auto;
+		font-weight: 400;
+		text-transform: uppercase;
+		text-align: center;
+		@include media ("<lg"){
+			font-size: oe_rem(32px);    
+			line-height: oe_rem(40px);
+		}
+		@include media ("<sm"){
+			font-size: oe_rem(26px);    
+			line-height: oe_rem(34px);
+		}
+	}
+
+	.entet{
+		font-size: oe_rem(16px);
+		margin: oe_rem(10px) auto;
+		font-weight: 300;
+	}
+
+	#Processus {
+
+		#tabs{
+			border: none;
+
+
+			.ui-widget-header{
+				background: none;
+				border: none;
+				display: flex;
+			}
+			.nav-tabs {
+				border: none;
+				li{
+					background: #fff;
+					font-weight: normal;
+					color: $second_main_color; 
+					margin: 10px 60px;
+					width: 460px;
+					max-width: 100%;
+					a{ 
+						background: #fff;
+						color: $second_main_color;
+						text-transform: uppercase;
+						border-radius: 0;
+						border: 1px solid $second_main_color;
+						font-size: oe_rem(16px);
+						text-align: center;
+						@include transition();
+
+						&.nav-link {
+							&.active , 
+							&:hover { 
+								background: $second_main_color;
+								color: #fff; 
+							} 
+						}
+
+					}
+					&:last-child{
+						margin-left: auto;	
+					}
+
+				}
+				@include media("<md"){ 
+					@include flex(center, center, column);
+					li{
+						width: 100% !important;
+						margin: 10px 0 !important;
+						a{  
+							font-size: oe_rem(14px);
+						}
+					}
+
+				}
+			}
+		}
+
+
+		.bloc-phase {
+
+			display: flex;
+			padding: oe_rem(60px) 0;
+
+			.phase{
+				width: 42%;
+				position: relative;
+				transition: opacity 0.7s ease-out 0s;
+				visibility: visible;
+				opacity: .2;
+				.number{
+					font-size: oe_rem(110px);
+					font-weight: bold;
+					text-align: right;
+					color: $main_color;
+					padding: oe_rem(0px) oe_rem(35px);
+				}
+				.description{
+					font-size: oe_rem(24px);
+					line-height: oe_rem(32px);
+					color: #000;
+					padding: oe_rem(0px) oe_rem(20px) oe_rem(20px);
+					position: relative;
+					&:after {
+						content: "";
+						border-bottom: oe_rem(8px) solid $second_main_color;
+						position: absolute;
+						bottom: 0;
+						width: oe_rem(60px);
+						height: oe_rem(12px);
+					}
+				}
+				.line {
+					position: absolute;
+					top: 72%;
+					background: rgba(162, 41, 41, 0.1) none repeat scroll 0px 0px;
+					margin: auto;
+					width: oe_rem(8px);
+					height: oe_rem(270px);
+					text-align: center;
+					.progress{
+						height: 0;
+						background: $second_main_color none repeat scroll oe_rem(0px) oe_rem(0px);
+						transition: height 1.2s ease-out 0s;
+						width: 100%;
+					}
+				}
+			}
+
+			&.normal {  	
+				flex-direction: row;
+
+				.phase{
+					.number{	
+						text-align: right;
+					}
+					.description{ 	
+						border-left: oe_rem(8px) solid $second_main_color; 
+						&:after {	
+							left: oe_rem(0px);	
+						}
+					}
+					.line {
+						right: -15%;
+						transform: rotate(-50deg);
+					}
+
+				}
+			}
+
+			&.reverse {  	
+				flex-direction: row-reverse; 
+				.phase{
+					.number{	
+						text-align: left;
+					}
+					.description{
+						border-right: oe_rem(8px) solid $second_main_color; 
+						&:after {	
+							right: oe_rem(0px);	
+						}
+					}
+					.line {
+						left: -25%;
+						transform: rotate(50deg);
+					}
+
+				}
+			}
+
+			&:last-child {
+				.phase {
+					.line {
+						display: none;
+					}
+				}
+			}
+
+			@include media("<md"){ 
+				padding: oe_rem(60px) 0;
+				.phase {
+					width: 100%;
+					.description {
+						font-size: oe_rem(20px);
+						line-height: oe_rem(30px);
+						border-right: oe_rem(8px) solid $second_main_color;
+						border-left: oe_rem(8px) solid $second_main_color; 
+					}
+					.line {
+						top: 50% !important;
+						right: 15% !important;
+						transform: rotate(0deg) !important;
+						margin-top: oe_rem(130px);
+						height: oe_rem(240px);
+					}
+				}
+				&.reverse {
+					.phase {
+						.line{
+							left: 15%;
+							right: initial !important;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+#Processus #tabs{
+	border: none;
+}
+h2.titre{
+	color: #113a74;
+	font-size: 48px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-align: center;
+}
+#Processus #tabs .ui-widget-header{
+	background: none;
+	border: none;
+	display: flex;
+}
+#Processus #tabs.ui-tabs .ui-tabs-nav li{
+	background: #fff;
+	font-weight: normal;
+	color: #113b74;
+	border: 1px solid #113b74;
+	border-radius: 0;
+	margin: 10px 60px;
+	text-transform: uppercase;
+	width: 460px;
+	max-width: 100%;
+}
+#Processus #tabs.ui-tabs .ui-tabs-nav li a{ color: #113b74;}
+#Processus #tabs.ui-tabs .ui-tabs-nav li:last-child{ margin-left: auto;	}
+#Processus #tabs.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+	float: none;
+	padding: 14px;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	font-size: 16px;
+}
+#Processus #tabs.ui-tabs .ui-tabs-nav li.ui-tabs-active,
+#Processus #tabs.ui-tabs .ui-tabs-nav li.ui-state-hover {
+	background: #113b74;
+	color: #fff;
+	border: 1px solid #113b74;
+}
+#Processus #tabs.ui-tabs .ui-tabs-nav li.ui-tabs-active a,
+#Processus #tabs.ui-tabs .ui-tabs-nav li.ui-state-hover a {
+	background: #113b74;
+	color: #fff;
+}
+
+.Processus .bloc-phase {
+	display: flex;
+	padding: 60px 0;
+}
+.Processus .bloc-phase.normal {  	flex-direction: row; }
+.Processus .bloc-phase.reverse {  	flex-direction: row-reverse; }
+.Processus .phase{
+	width: 42%;
+	position: relative;
+	transition: opacity 0.7s ease-out 0s;
+	visibility: visible;
+	opacity: .2;
+}
+
+.Processus .phase .number{
+	font-size: 110px;
+	font-weight: bold;
+	text-align: right;
+	color: #21a485;
+	padding: 0px 35px;
+}
+.Processus .reverse .number{	text-align: left;}
+.Processus .description{
+	font-size: 32px;
+	line-height: 36px;
+	color: #000;
+	padding: 0px 30px 30px;
+	position: relative;
+}
+.Processus .description:after {
+	content: "";
+	border-bottom: 12px solid #113a74;
+	position: absolute;
+	bottom: 0;
+	width: 60px;
+	height: 12px;
+}
+
+.Processus .normal .description{ 	border-left: 12px solid #113a74; }
+.Processus .reverse .description{ 	border-right: 12px solid #113a74; }
+.Processus .normal .description:after {	left: 0px;	}
+.Processus .reverse .description:after {	right: 0px;	}
+
+
+
+.Processus .bloc-phase .phase .line {
+	position: absolute;
+	top: 72%;
+	background: rgba(162, 41, 41, 0.1) none repeat scroll 0px 0px;
+	margin: auto;
+	width: 9px;
+	height: 270px;
+	text-align: center;
+}
+
+
+.Processus .bloc-phase.normal .phase .line {
+	right: -15%;
+	transform: rotate(-50deg);
+}
+
+.Processus .bloc-phase.reverse .phase .line {
+	left: -25%;
+	transform: rotate(50deg);
+}
+
+.Processus .bloc-phase .phase .line .progress{
+	height: 0;
+	background: #113a74 none repeat scroll 0px 0px;
+	transition: height 1.2s ease-out 0s;
+	width: 100%;
+}
+
+.Processus .bloc-phase:last-child .phase .line {
+	display: none;
+}

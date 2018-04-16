@@ -1,0 +1,32 @@
+#home_video{
+	.bandeau{
+		position: relative;
+		background-color: $second_main_color;
+		overflow: hidden;
+		.info{
+			
+			.titre{
+				
+			}
+			.description{
+				
+			}
+			a{  
+				
+			}
+		}
+		&.home_video{
+			height: oe_rem(460px);
+
+			@include media("<md"){
+				height: oe_rem(260px);
+			} 
+		}
+		&:after{
+			content: ''; 
+			z-index: 2;
+			background-color: rgba(0,0,0,.3);
+			@include position(absolute,0,0,0,0);
+		}
+	}
+}

@@ -1,0 +1,96 @@
+.actualites{
+	.actualite{
+		a{
+			.bloc{
+				height: oe_rem(610px);
+				background-size: cover !important;
+				background-position: 50% !important;
+				padding: oe_rem(50px) oe_rem(110px);
+				background-color: $second_main_color !important;
+				.shadow{
+					@include position(absolute,0,0,0,0); 
+					background-color: rgba(11, 13, 12, 0.35); 
+				}
+				.info{
+					z-index: 3;
+					position: relative;
+					.date{
+						color: $text_color;
+						font-size: oe_rem(22px);
+						text-transform: uppercase;
+					}
+					.titre{
+						color: $text_color;
+						font-size: oe_rem(26px);
+						line-height: oe_rem(36px);
+						margin-top: oe_rem(20px);
+						@include transition();
+					}
+				}
+				
+			}
+			&:hover{ 
+				.bloc{
+					.shadow{
+					}
+					.info{
+						.titre{
+							border-bottom: 1px solid #fff;
+							padding-bottom: 8px;
+						}
+
+					}
+
+				}	
+			}
+		}
+	}
+	.owl-theme {
+		.owl-nav { 
+			@include position(absolute, 50%, 0, initial, 0);
+			margin: 0;
+			margin-top: oe_rem(-18px);
+			[class*='owl-'] {
+				color: $lighter_color;
+				background: transparent;
+				border-radius: 50%;
+				position: absolute;
+			}
+			.owl-prev{
+				left: 2%;
+			}
+			.owl-next{
+				right: 2%;
+			}
+		}
+
+
+		@include media("<md"){
+			.owl-nav { 
+				@include position(absolute, initial, 0, 120px, 0);
+			}
+		}
+	}
+
+	@include media("<xl"){
+		.actualite{
+			a{
+				.bloc{
+					height: oe_rem(400px);
+					padding: oe_rem(40px) oe_rem(20px);
+				}
+			}
+		}
+	}
+
+	@include media("<lg"){
+		.actualite{
+			a{
+				.bloc{
+					height: oe_rem(400px);
+					padding: oe_rem(40px) oe_rem(20px);
+				}
+			}
+		}
+	}
+}

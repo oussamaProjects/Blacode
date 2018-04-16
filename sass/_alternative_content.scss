@@ -1,0 +1,198 @@
+
+/*---------------------------------------------------
+--------------  PAGE TYPE
+---------------------------------------------------*/
+
+
+.page_type {
+	padding:  oe_rem(20px) 0;
+	.element{
+		@include flex(flex-start,flex-start,row);
+		padding-bottom: oe_rem(30px);
+
+		.content{
+			flex: 2;
+			.info{
+				padding: 0  0 0 oe_rem(30px);
+				.titre{ 
+					// font-size: oe_rem(29px);
+					// margin-bottom: oe_rem(40px);
+
+					text-align: left; 
+					color: $main_color;
+				} 
+
+				.titreSection{
+					font-size: oe_rem(40px);
+					margin-bottom: oe_rem(40px);
+					text-align: center;
+					color: $main_color;
+				}
+				.description{
+					.alignnone { 
+						margin: 5px 20px 20px 0;
+						text-align: center;
+						margin: 0 auto 40px;
+						display: block;
+					} 
+				}
+				.lire{
+					font-size: oe_rem(16px);
+				}
+			}
+		}
+
+		.image{
+			overflow: hidden;
+			flex: 2; 
+		}
+
+		&:nth-child(even){
+			@include flex(flex-start,flex-start,row-reverse);
+			.content{
+				flex: 2; 
+				.info{
+					padding: 0 oe_rem(30px) 0 0;
+				}
+			}
+			.image{
+				overflow: hidden;
+				flex: 2; 
+			}
+		}
+
+		&.no-img {
+			.content{ 
+				flex: none;
+				width: 100%;
+				max-width: 100%; 
+				.info{
+					padding: 0;
+					.titre{ 
+						text-align: left;
+						color: $main_color;
+						margin-bottom: oe_rem(20px);
+					}
+					.description{
+						text-align: justify;
+					}
+				}
+			}
+
+		}
+
+
+	}
+
+	@include media("<xl"){
+		.element{
+			@include flex(center, center, row);
+			&:nth-child(even){
+				@include flex(center, center, row-reverse);
+			}
+
+		}
+	}
+
+	@include media("<lg"){
+		.element{
+			@include flex(center,center,column);
+			.content{
+				flex: 2;
+				.info{
+					padding: 0;
+					text-align: center;
+					.titre{ 
+						margin-top: oe_rem(20px);
+						text-align: left;  
+					} 
+
+					.titreSection{
+						font-size: oe_rem(26px);  
+						margin-bottom: oe_rem(30px); 
+					}
+				}
+			}
+			&:nth-child(even){
+				@include flex(center,center,column);
+			}
+
+		}
+	}
+
+	@include media("<sm"){
+		.element{ 
+			.content{ 
+				.info{ 
+					.titreSection{
+						font-size: oe_rem(24px);
+						margin-bottom: oe_rem(28px); 
+					}
+				}
+			} 
+
+		}
+	}
+
+}
+
+
+.page-id-90{
+	.page_type {
+		.element{
+			@include flex(center, flex-start, row);
+			&:nth-child(even){
+				@include flex(center, flex-start, row-reverse);
+			}
+		}
+		@include media("<xl"){
+			.element{
+				@include flex(center, center, row);
+				&:nth-child(even){
+					@include flex(center, center, row-reverse);
+				}
+
+			}
+		}
+		@include media("<lg"){
+			.element{
+				@include flex(flex-start,flex-start,column);
+				.content{
+					flex: 2;
+					.info{
+						padding: 0;
+						.titre{
+							margin-top: oe_rem(20px);
+							text-align: left;  
+						} 
+						.titreSection{
+							font-size: oe_rem(26px); 
+							margin-bottom: oe_rem(30px); 
+						}
+					}
+					.description{ 
+						margin:  oe_rem(20px) 0; 
+					}
+				}
+				&:nth-child(even){
+					@include flex(flex-start,flex-start,column);
+				}
+
+			}
+		}
+		@include media("<sm"){
+			.element{ 
+				.content{ 
+					.info{ 
+						.titreSection{
+							font-size: oe_rem(24px);
+							margin-bottom: oe_rem(28px); 
+						}
+					}
+				} 
+
+			}
+		}
+		
+	}
+}

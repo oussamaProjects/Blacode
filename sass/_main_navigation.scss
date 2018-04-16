@@ -1,0 +1,114 @@
+
+.main-navigation{ 
+
+	ul{
+		margin: 0;
+		padding: 0;
+		margin-top: 15px;
+		min-height: 80px;
+		list-style-type: none;
+		li{ 
+			padding: 0 oe_rem(10px); 
+
+			&.current-menu-item > ,
+			&.current-menu-parent > ,
+			&.current-menu-ancestor > {
+				a{ 
+					text-decoration: none;
+					color: $second_main_color;
+				}
+			}
+
+			a{
+				@include transition();
+				font-weight: 500;
+				font-size: oe_rem(18px);
+				color: $lighter_color;
+				text-transform: uppercase;
+
+				&:hover,
+				&:focus,
+				&:active{
+					text-decoration: none;
+					color: $second_main_color;
+				}
+			}
+			
+			ul{
+				margin: 0;
+				z-index: 9;
+				width: 500px;
+				display: none;
+				background: #fff;
+				overflow: hidden;
+				position: absolute;
+				min-height: oe_rem(255px);
+				margin-left: oe_rem(-10px);
+				border: 1px solid $lighter_color;
+				box-shadow: oe_rem(0px) oe_rem(0px) oe_rem(4px) $lighter_color;
+				padding: oe_rem(20px) 0;
+				li{
+					width: oe_rem(250px);
+					a{
+						color: $lighter_color;
+						font-size: oe_rem(16px);
+						text-transform: none;
+						font-weight: 300;    
+						display: block;
+						min-height: oe_rem(42px);
+						margin: 0 oe_rem(20px);
+						padding: oe_rem(10px) 0;
+						border-bottom: 1px solid $lighter_color;
+						&:hover,
+						&:focus,
+						&:active{
+							text-decoration: none;
+							color: $second_main_color;
+							border-bottom: 1px solid $second_main_color;
+						}
+					}
+					&.img_menu {
+						top: 0px;
+						right: 0px;
+						padding: 0;
+						position: absolute;
+						width: oe_rem(250px);
+						a{
+							margin: 0;
+							padding: 0;
+						}
+					}
+				}
+			}
+			&:hover{
+				ul{
+					display: block;
+					@include flex(flex-start, flex-start,column);
+				}
+			}
+		}
+	}
+
+	@include media("<xl") {
+		ul{   
+			li{   
+				a{ 
+					font-size: oe_rem(16px);  
+				}
+			}
+		}
+	}
+
+	@include media("<lg") {
+		display: none; 
+
+	}
+
+
+}
+
+
+
+
+
+

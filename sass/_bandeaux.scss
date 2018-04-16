@@ -1,0 +1,98 @@
+.bandeau{
+	position: relative;
+	img{
+		width: 100%;
+	}
+	.info{
+		position: absolute;
+		top:0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 3; 
+		text-align: center;
+		@include flex(center,center,column);
+		.titre{
+			color: $text_color;
+			font-size: oe_rem(48px); 
+			line-height: 3.125rem;
+		}
+		.description{
+			color: $text_color;
+			font-size: 1.6875rem;
+			line-height: 2.25rem;
+			margin-top: 20px;
+			font-weight: 300;
+		}
+		a{  
+			margin-top: oe_rem(40px); 
+			@include button-variant($text_color, transparent, $text_color);
+		}
+	}
+	&.site-branding{
+		.titre{
+			color: $text_color;
+			font-size: oe_rem(50px); 
+			font-weight: 300;
+			line-height: oe_rem(60px);
+		}
+	}
+	&:after{
+		content: ''; 
+		z-index: 2;
+		background-color: rgba(0,0,0,.3);
+		@include position(absolute,0,0,0,0);
+	}
+
+
+	@include media("<md"){
+		height: oe_rem(260px);
+		img{
+			height: 100%;
+		}
+		.info{
+			.titre{
+				font-size: oe_rem(40px); 
+			}
+			.description{
+				font-size: oe_rem(20px); 
+			}
+			a{
+				margin-top: oe_rem(20px); 
+			}
+		}
+		&.site-branding{
+			.titre{
+				font-size: oe_rem(42px); 
+			}
+		}
+
+	} 
+
+	@include media("<sm"){
+		height: oe_rem(260px);
+		img{
+			height: 100%;
+		}
+		.info{
+			.titre{
+				font-size: oe_rem(25px); 
+			}
+			.description{
+				font-size: oe_rem(20px); 
+			}
+			a{
+				margin-top: oe_rem(20px); 
+			}
+		}
+		&.site-branding{
+			.titre{
+				font-size: oe_rem(28px); 
+				line-height: oe_rem(34px);
+			}
+		}
+
+	} 
+
+}
+
