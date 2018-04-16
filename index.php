@@ -52,7 +52,23 @@ Aucun abonnement contraignant, aucune dépendance vis-à-vis de l’agence.
 
 </section>
 
-
+<section class="bandeau">
+	<div class="info">
+		<div class="conatiner">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="titre">
+						Un projet ? Discutons-en !
+					</div>
+					<div class="description">
+						Nous possédons une réelle expertise UI & UX et soignons nos clients			
+					</div>
+					<a href="#"> <?php _e('Rencontrons-nous','blacode'); ?></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 
 	<div id="primary" class="content-area">

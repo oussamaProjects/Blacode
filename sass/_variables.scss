@@ -2,10 +2,10 @@
 // --------------------------
 
 $main_text_color      : #000;
-$text_color           : #fff !default;
+$text_color           : #262424 !default;
 
 $main_color           : #000 !default;
-$second_main_color    : #444444 !default;
+$second_main_color    : #efefef !default;
 
 $lighter_color        : lighten($main_text_color,40%);
 $light_color          : lighten($main_text_color,15%);
