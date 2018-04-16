@@ -1,11 +1,11 @@
 // My vars
 // --------------------------
 
-$main_text_color      : #444444;
+$main_text_color      : #000;
 $text_color           : #fff !default;
 
 $main_color           : #000 !default;
-$second_main_color    : #ff0000 !default;
+$second_main_color    : #444444 !default;
 
 $lighter_color        : lighten($main_text_color,40%);
 $light_color          : lighten($main_text_color,15%);
@@ -265,10 +265,12 @@ $grid-gutter-widths: (
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-sans-serif: Helvetica, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif !default;
+$font-family-sans-serif-2: Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif !default;
 $font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:       $font-family-sans-serif !default;
+$font-family-base-2:       $font-family-sans-serif-2 !default;
 
 $font-size-base: 1.375rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:   1.25rem !default;

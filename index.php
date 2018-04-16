@@ -27,7 +27,7 @@ Agence de communication digitale
 </h2>
 <p>
 Depuis 2009, Blacode accompagne les marques… 
-Acteurs du changement,  nous adorons les nouveaux projets, collaborons avec passion et rassemblons nos talents pour servir vos ambitions et réussir votre développement business web et mobile.	
+Acteurs du changement,  nous adorons les nouveaux projets, collaborons avec passion et rassemblons <a href="#">nos talents</a> pour servir vos ambitions et réussir votre développement business web et mobile.	
 </p>
 <h3>
 Les meilleurs experts sur chaque métier

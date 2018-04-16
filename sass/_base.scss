@@ -1,5 +1,8 @@
 /* =WordPress Core
 -------------------------------------------------------------- */
+body{
+	font-family: $font-family-base;
+}
 h1, .h1 {
 	font-size: oe_rem(60px);
   }
@@ -26,8 +29,16 @@ border: 1px solid $main_color;
 	  font-weight: 200;
 	  line-height: oe_rem(52px);
 	  margin-bottom: oe_rem(60px) !important; 
+	  a{
+		font-weight: 400;
+		@include transition(all, .25s, ease-in-out);
+		&:hover{
+		  border-bottom: 1px solid $main_color;
+		  padding-bottom: oe_rem(5px);
+		}
+	}
   }
-  
+ 
 ul{
 	text-align: initial;
 }
@@ -363,13 +374,7 @@ blockquote {
 	}
 }
 
-.sous-titre,
-h3{
-	font-size: 1.375rem;
-	text-transform: uppercase;
-	margin-bottom: 1.5rem;
-}
-
+ 
 
 .image{
 	overflow: hidden;
