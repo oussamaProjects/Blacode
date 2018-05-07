@@ -1,18 +1,15 @@
-.home_header{
-height: oe_rem(570px);
-	background-color: $main_color;
-	margin-bottom: oe_rem(120px); 
-
+.page_header{  
 	.top_header{
 		height: oe_rem(150px);
 		@include flex(center, space-between, row); 
- 
+
+
 nav{
 ul{
 	@include flex(center, flex-end, row); 
 	li{
 		a{
-			color: #fff;
+			color: $main_color;
 font-size: oe_rem(14px);
 font-weight: 400;
 text-transform: uppercase;

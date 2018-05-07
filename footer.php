@@ -14,18 +14,21 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'blacode' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'blacode' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'blacode' ), 'blacode', '<a href="https://comenscene.com/">Com en scene</a>' );
-				?>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<img src="<?php bloginfo( 'template_url' ) ?>/img/logo_footer.png" alt="">
+				</div>
+				<div class="col-md-8">
+				
+				<ul class="footer-info">
+				<li><i class="fa fa-envelope"></i><a href="mailto:bonjour@blacode.com">bonjour@blacode.com</a></li>
+				<li><i class="fa fa-fix"></i><a href="tel:0123458939">01 23 45 89 39</a></li>
+				<li><i class="fa fa-fix"></i><span>Chemin Challet 870000 LIMOGES</span></li>
+				</ul>
+				
+				</div>
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

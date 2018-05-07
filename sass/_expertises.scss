@@ -1,0 +1,53 @@
+.expertises{
+	display: grid;
+	grid-template-columns: repeat(2,  1fr);
+	grid-column-gap: 30px;
+	grid-row-gap: 50px;
+
+	.expertise{
+		height: oe_rem(600px);
+		padding: oe_rem(60px) oe_rem(35px);
+		background-color: $second_main_color;
+		@include transition(background-color, .3s, ease-in-out);
+		.titre{
+			font-size: oe_rem(40px);
+			font-weight: 600;
+			padding-bottom: oe_rem(10px);
+			@include transform-translate(0, oe_rem(430px), 0);			
+			@include transition(all, .22s, ease-in-out);
+		}
+		.description{
+			ul{
+				@include transition(opacity, .3s, ease-in-out);
+				opacity: 0;
+				list-style: "-";
+				font-size: oe_rem(20px);
+				font-weight: 400;
+				line-height: oe_rem(50px);
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+		}
+		&:hover{
+			background-color: transparent;
+			.titre{
+				@include transform-translate(0, 0, 0);				
+			}
+			.description{
+				ul{
+					opacity: 1;	
+				}	
+			}
+
+		}
+		&:nth-child(1){
+			margin-top: 0 !important;
+		}
+		&:nth-child(2){
+			margin-top: oe_rem(150px);
+		}
+		&:nth-child(odd){
+			margin-top: oe_rem(-150px);
+		}
+	}
+}

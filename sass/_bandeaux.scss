@@ -29,7 +29,15 @@
 		a{  
 			margin-top: oe_rem(60px); 
 			text-transform: uppercase;
-			@include button-variant(#fff, $text_color, $text_color);
+			padding: 0 oe_rem(20px);
+			height: oe_rem(74px);
+			line-height: oe_rem(74px);
+			display: inline-block;
+			@include transition(all, .25s, ease-in-out);
+			@include button-variant(#fff, $main_color, $main_color);
+			&:hover{
+			@include button-variant($main_color, #fff, $main_color);
+			}
 		}
 	} 
 
@@ -70,6 +78,74 @@
 			}
 		} 
 
+	} 
+
+}
+
+
+
+.page_bandeau{
+	height: oe_rem(400px);
+	margin-bottom: oe_rem(80px);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+ 
+	@include media("<md"){
+		height: oe_rem(260px); 
+	} 
+
+	@include media("<sm"){
+		height: oe_rem(260px); 
+	} 
+
+}
+
+
+.bas_page_bandeau{
+	position: relative;
+	height: oe_rem(565px); 
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	.info{
+		position: absolute;
+		top:0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 3; 
+		text-align: center;
+		@include flex(center, center, column);
+		.titre{
+			color: #fff;
+			font-size: oe_rem(36px); 
+			line-height: 3.125rem; 
+			font-weight: 600;
+		}
+
+		a{  
+			margin-top: oe_rem(60px); 
+			text-transform: uppercase;
+			padding: 0 oe_rem(20px);
+			height: oe_rem(74px);
+			line-height: oe_rem(74px);
+			display: inline-block;
+			@include transition(all, .25s, ease-in-out);
+			@include button-variant(#fff, $main_color, $main_color);
+			&:hover{
+				@include button-variant($main_color, #fff, $main_color);
+				}
+		}
+	}
+	@include media("<md"){
+		height: oe_rem(260px); 
+	} 
+
+	@include media("<sm"){
+		height: oe_rem(260px); 
 	} 
 
 }

@@ -60,21 +60,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "side_menu";
 
 @import "home/home_header";
-@import "home/home_zones_activites";
+@import "home/page_header";
 
-@import "home/home_video_bandeau";
-
-@import "home/home_activites";
-@import "home/home_stories";
-
-@import "home/home_events";
+@import "home/home_projets";
 
 @import "home/home_actus";
 
 @import "content_page";
 @import "alternative_content";
 @import "list";
-@import "carrieres";
+@import "expertises";
 @import "modes_implantation";
 
 @import "downloads";

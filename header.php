@@ -25,7 +25,12 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'blacode' ); ?></a>
 
 	<header id="masthead" class="site-header">
+	<?php if (is_home()) { ?>
 	<?php get_template_part( 'contents/home','header' )  ?>
+	<?php } else { ?>
+	<?php get_template_part( 'contents/page','header' )  ?>
+	<?php } ?>
+	
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

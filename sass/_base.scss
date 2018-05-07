@@ -1,47 +1,89 @@
 /* =WordPress Core
 -------------------------------------------------------------- */
-body{
+
+body {
 	font-family: $font-family-base;
+	font-size: $font-size-base;
+	font-weight: $font-weight-base;
+	line-height: $line-height-base; 
+	color: $body-color; 
+	background-color: $body-bg;
+
+	@include media("<md"){
+		font-size: $font-size-lg; 
+		line-height: $line-height-lg;
+	}
+	@include media("<sm"){
+		font-size: $font-size-sm;  
+		line-height: $line-height-sm;
+	}
+	
+
+	p {
+		margin-top: 0;
+		margin-bottom: 1rem;
+	}
+
+	img{
+		max-width: 100%;
+		height: initial;
+	}
+
 }
+
 h1, .h1 {
 	font-size: oe_rem(60px);
-  }
-  
-  h2, .h2 {
+	padding-bottom: oe_rem(80px);
+	position: relative;;
+	&:after{
+		content: "";
+		@include position(absolute, initial, initial, oe_rem(25px), 0);
+		width: oe_rem(80px);
+		border: 1px solid $main_color;
+	}
+}
+
+h2, .h2 {
 	font-size: oe_rem(40px);
 	padding-bottom: oe_rem(80px);
 	position: relative;;
 	&:after{
-content: "";
-@include position(absolute, initial, initial, oe_rem(25px), 0);
-width: oe_rem(80px);
-border: 1px solid $main_color;
+		content: "";
+		@include position(absolute, initial, initial, oe_rem(25px), 0);
+		width: oe_rem(80px);
+		border: 1px solid $main_color;
 	}
-  }
-  
-  h3, .h3 {
+}
+
+
+h3, .h3 {
 	font-size: oe_rem(30px);
-  }
+	line-height: oe_rem(60px);
+}
 
 
-  p{
-	  font-size: oe_rem(24px);
-	  font-weight: 200;
-	  line-height: oe_rem(52px);
-	  margin-bottom: oe_rem(60px) !important; 
-	  a{
+p{
+	font-size: oe_rem(24px);
+	font-weight: 200;
+	line-height: oe_rem(52px);
+	margin-bottom: oe_rem(60px) !important; 
+	a{
 		font-weight: 400;
 		@include transition(all, .25s, ease-in-out);
 		&:hover{
-		  border-bottom: 1px solid $main_color;
-		  padding-bottom: oe_rem(5px);
+			border-bottom: 1px solid $main_color;
+			padding-bottom: oe_rem(5px);
 		}
 	}
-  }
+}
  
 ul{
-	text-align: initial;
+	font-size: oe_rem(24px);
+	font-weight: 200;
+	line-height: oe_rem(52px);
+	margin-bottom: oe_rem(60px) !important; 
 }
+
 .alignnone {
 	margin: 5px 20px 20px 0;
 }
@@ -150,37 +192,6 @@ a img.aligncenter {
 // My style
 
 
-body {
-	font-family: $font-family-base;
-	font-size: $font-size-base;
-	font-weight: $font-weight-base;
-	line-height: $line-height-base; 
-	color: $body-color; 
-	background-color: $body-bg;
-
-	@include media("<md"){
-		font-size: $font-size-lg; 
-		line-height: $line-height-lg;
-	}
-	@include media("<sm"){
-		font-size: $font-size-sm;  
-		line-height: $line-height-sm;
-	}
-	
-
-	p {
-		margin-top: 0;
-		margin-bottom: 1rem;
-	}
-
-	img{
-		max-width: 100%;
-		height: initial;
-	}
-
-}
-
-
 a{
 	&:hover,
 	&:focus,
@@ -270,50 +281,6 @@ blockquote {
 			max-height: 290px;
 		}
 	}
-}
-
-
-.titre{
-	color: $white;
-	font-size: oe_rem(55px);
-	text-transform: uppercase;
-	text-decoration: none;
-
-	.sous-titre{
-		font-size: oe_rem(55px);
-		color: $main_color;
-		font-weight: 500;
-		text-transform: uppercase;
-		margin-bottom: oe_rem(50px);
-		line-height: oe_rem(50px);
-	}
-
-	&.section_titre{
-		color: $main_text_color;
-		text-align: center;
-	}
-
-	@include media("<md") {
-		
-		font-size: oe_rem(40px);
-		.sous-titre{
-			font-size: oe_rem(35px);
-			margin-bottom: oe_rem(30px);
-			line-height: oe_rem(30px);;
-
-		}
-	}
-	@include media("<sm") {
-		
-		font-size: oe_rem(35px);
-		.sous-titre{
-			font-size: oe_rem(25px);
-			margin-bottom: oe_rem(20px);
-			line-height: oe_rem(20px);;
-
-		}
-	}
-
 }
 
 .info{

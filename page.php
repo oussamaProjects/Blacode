@@ -18,23 +18,20 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+			<?php
+				while ( have_posts() ) :
+					the_post(); 
+					get_template_part( 'template-parts/content', 'page' ); 
+				endwhile; // End of the loop.
+			?>
 
-			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
+			<? if ( get_the_ID() == 8 ) include 'contents/expertises.php';  ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php
-get_sidebar();
+	<?php $call_to_action = get_field('call_to_action', get_the_ID());  ?>
+	<?php include 'contents/bandeau.php'; ?>
+
+<?php 
 get_footer();

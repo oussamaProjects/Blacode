@@ -1,0 +1,50 @@
+.projets_container{
+
+	height: oe_rem(735px);
+	background-color: $second_main_color;
+ margin-bottom: oe_rem(80px);
+
+	.owl-theme {
+		.owl-nav { 
+			[class*='owl-'] {
+				color: $main_color;
+				background: $white !important;
+				border: oe_rem(1px) solid $lighter_color;
+				background: transparent;
+				border-radius: 50%; 
+				height: oe_rem(30px);
+				width: oe_rem(30px);
+				padding: oe_rem(2.5px) 0;
+				margin: 0px oe_rem(8px);
+				@include transition();
+				&:hover {
+					color: $white;
+					background: $main_color !important; 
+					border: 1px solid $main_color;
+				}
+			}
+			@include position(absolute, 0%, initial, initial, 50%);
+			margin: 0;
+			margin-left: oe_rem(20px);
+		}
+	}
+
+	@include media("<lg"){
+		.owl-theme { 
+			.owl-nav { 		
+				@include position(absolute, initial, 0, 0, initial);
+				margin: 0; 
+			}
+		}
+	}
+
+	@include media("<md"){
+		.owl-theme { 
+			.owl-nav { 		
+				@include position(absolute, initial, 0, 0, initial);
+				margin: 0; 
+			}
+		}
+	}
+
+}

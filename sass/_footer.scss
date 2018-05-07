@@ -1,133 +1,39 @@
 
 footer {
-	
-	color:$text_color;
-	text-align: center;
+	color: $white;
 	background-color: $main_color;
-	
-	.topFooter{
-		.box{
-			padding: oe_rem(50px) 0 oe_rem(20px);
-			.titles {
-				color: $text_color;
-				font-size: oe_rem(16px);
-				font-weight: 400;
-				margin-bottom: oe_rem(18px);
-				text-transform: uppercase;
-			}
-			.phone-footer,
-			.phon{
-				font-size: oe_rem(14px);
-			}
-			#newsletter{
-				position: relative; 
-				height: oe_rem(50px);
-				overflow: hidden;
-
-				input{
-					height: oe_rem(50px);
-					border: none;
-				}
-				input[type="submit"]{
-					position: absolute;
-					top: 0;
-					right: 0;
-					background-color: $second_main_color;
-					color: $text_color;
-					font-size:oe_rem(14px);
-					border-top-right-radius: oe_rem(2px) !important;
-					border-bottom-right-radius: oe_rem(2px) !important;
-				}
-				input[type="email"]{
-					border-radius: oe_rem(2px) !important;
-				}
-
-				.wpcf7 .ajax-loader {
-					position: absolute;
-					bottom: oe_rem(20px);
-				}
-				.wpcf7-response-output {
-					margin: 0;
-				}
-				.wpcf7-not-valid-tip { 
-					margin-top: oe_rem(20px);
-				}
-			}
-			.mail{
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				width: oe_rem(228px);
-				margin: 0 auto;
-				a{
-					color: white;
-					font-size: oe_rem(14px);
-				}
-			}
-		}
-		@include media("<md"){
-			padding: oe_rem(20px) 0;
-			.box{
-				padding: oe_rem(20px) 0;
-			}
-		}
-
-	}
-
-	.bottomFooter{
-		min-height: oe_rem(60px);
-		background-color: $second_main_color;
-		a{ 
-			&:hover,
-			&:active,
-			&:focus{ 
-				border-bottom: oe_rem(1px) solid $text_color;
-				margin-bottom: oe_rem(2px);
-			}
-		}
-
-		.sprt{
-			font-size: oe_rem(14px);
-		}
-
-		a{
-			color: $text_color;
-			margin: 0 oe_rem(4px);
-			font-size: oe_rem(14px);
-			@include transition();
-			&:hover,
-			&:active,
-			&:focus{
-				color: $text_color;
-				text-decoration: none; 
-			}
-		}
-		
-		span{
-			color: $text_color;
-			margin: 0 oe_rem(4px);
-			font-size: oe_rem(14px);
-		}
-
-		@include media("<md"){
-			padding: 4px;
-			.sprt{
-				display: none;
-			}
-
+	height: oe_rem(98px);
+	padding: oe_rem(26px) 0;
+	ul.footer-info{
+		list-style: none;
+		padding: 0 !important;
+		margin: 0 !important;
+		@include flex(center, flex-end, row);
+		li{
+			margin: 0 oe_rem(10px);
+			color: $white;
 			a{
-				display: block;
-				text-align: center; 
-				padding: 4px;
+				color: $white;
+				margin: 0 oe_rem(4px);
+				font-size: oe_rem(18px);
+				@include transition();
 				&:hover,
 				&:active,
 				&:focus{
-					border:none;
-					margin: auto;
+					color: $white;
+					text-decoration: underline; 
 				}
 			}
+			span{
+				color: $white;
+				margin: 0 oe_rem(4px);
+				font-size: oe_rem(18px);
+			}
 		}
+	}
+		
 
+	@include media("<md"){ 
 	}
 
 }
