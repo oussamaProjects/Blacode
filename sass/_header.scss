@@ -79,7 +79,7 @@
 	overflow: hidden;
 	padding: 0 oe_rem(60px);
 	background-color: #14385c;
-	@include flex(center, flex-start, row)
+	@include flex(center, flex-start, row);
 
 	a{
 		text-decoration: none;

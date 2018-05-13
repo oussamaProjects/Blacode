@@ -16,18 +16,17 @@ get_header();
 			<?php
 			while ( have_posts() ) :
 				the_post();
-
 				get_template_part( 'template-parts/content', get_post_type() );
-
-				the_post_navigation();
+				//the_post_navigation();
 
 			endwhile; // End of the loop.
 			?>
-
-
+ 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php
-get_sidebar();
+	<?php $call_to_action = get_field('call_to_action', get_the_ID());  ?>
+	<?php include 'contents/bandeau.php'; ?>
+	
+<?php 
 get_footer();

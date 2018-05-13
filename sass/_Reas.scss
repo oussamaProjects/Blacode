@@ -1,0 +1,77 @@
+.rea{
+    .titre{
+        font-size: oe_rem(36px);
+        font-weight: 700;
+        line-height: oe_rem(50px);
+    }
+    .description{
+        font-size: oe_rem(24px);
+        font-weight: 300;
+        line-height: oe_rem(50px);
+    }
+    .cats{
+        font-size: oe_rem(24px);
+        font-weight: 300;
+        line-height: oe_rem(50px);
+    }
+}
+
+.projet{
+    h1{ 
+        padding-bottom: oe_rem(0);
+        font-weight: 700;
+        &:after{
+            content: none ; 
+        }
+    }
+    h2{
+        font-size: oe_rem(30px);
+        font-weight: 400;
+        line-height: oe_rem(47px);
+        padding-bottom: oe_rem(0);
+        &:after{
+            content: none ; 
+        }
+    }
+    .image{
+        margin-bottom: oe_rem(80px);
+        text-align: center;
+    }
+}
+
+#realisationContent{
+
+    .page_bandeau{
+        margin: oe_rem(40px) 0 oe_rem(20px);
+    } 
+    
+    ul{ 
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        @include flex(flex-start, flex-start, row);
+        flex-wrap: wrap;
+        li{
+            &:after{
+                content: "/";
+                padding: 0 oe_rem(10px);
+            }
+        }
+    }
+}
+
+
+#plusRealisation{
+    width: oe_rem(340px);
+    height: oe_rem(65px);
+    text-align: center;
+    line-height: oe_rem(65px);
+    font-size: oe_rem(24px);
+    font-weight: 300;
+    display: block;
+    text-transform: uppercase;
+    margin: oe_rem(60px) auto;
+    color: $main_color;
+    border: oe_rem(1px) solid $main_color;
+    cursor: pointer;
+}
