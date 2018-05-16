@@ -12372,7 +12372,7 @@ form .obligatoires {
   font-weight: 400;
 }
 
-.bandeau .info a {
+.bandeau .info a.link {
   margin-top: 3.75rem;
   text-transform: uppercase;
   padding: 0 1.25rem;
@@ -12385,56 +12385,88 @@ form .obligatoires {
   border-color: #000;
 }
 
-.bandeau .info a:hover {
+.bandeau .info a.link:hover {
   color: #fff;
   background-color: black;
   border-color: black;
 }
 
-.bandeau .info a:focus, .bandeau .info a.focus {
+.bandeau .info a.link:focus, .bandeau .info a.link.focus {
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
-.bandeau .info a.disabled, .bandeau .info a:disabled {
+.bandeau .info a.link.disabled, .bandeau .info a.link:disabled {
   background-color: #000;
   border-color: #000;
 }
 
-.bandeau .info a:active, .bandeau .info a.active,
-.show > .bandeau .info a.dropdown-toggle {
+.bandeau .info a.link:active, .bandeau .info a.link.active,
+.show > .bandeau .info a.link.dropdown-toggle {
   color: #fff;
   background-color: black;
   background-image: none;
   border-color: black;
 }
 
-.bandeau .info a:hover {
+.bandeau .info a.link:hover {
   color: #000;
   background-color: #fff;
   border-color: #000;
 }
 
-.bandeau .info a:hover:hover {
+.bandeau .info a.link:hover:hover {
   color: #000;
   background-color: #e6e6e6;
   border-color: black;
 }
 
-.bandeau .info a:hover:focus, .bandeau .info a:hover.focus {
+.bandeau .info a.link:hover:focus, .bandeau .info a.link:hover.focus {
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
-.bandeau .info a:hover.disabled, .bandeau .info a:hover:disabled {
+.bandeau .info a.link:hover.disabled, .bandeau .info a.link:hover:disabled {
   background-color: #fff;
   border-color: #000;
 }
 
-.bandeau .info a:hover:active, .bandeau .info a:hover.active,
-.show > .bandeau .info a:hover.dropdown-toggle {
+.bandeau .info a.link:hover:active, .bandeau .info a.link:hover.active,
+.show > .bandeau .info a.link:hover.dropdown-toggle {
   color: #000;
   background-color: #e6e6e6;
   background-image: none;
   border-color: black;
+}
+
+.bandeau .cats {
+  margin: 2.8125rem 0;
+}
+
+.bandeau .cats ul {
+  font-size: 1.875rem;
+  line-height: 3.125rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.bandeau .cats ul li:after {
+  content: "/";
+  padding: 0 0.625rem;
 }
 
 @media (max-width: 767px) {
@@ -13892,7 +13924,7 @@ form .obligatoires {
   margin: 2.5rem 0 1.25rem;
 }
 
-#realisationContent ul {
+.cats ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -13913,9 +13945,13 @@ form .obligatoires {
       flex-wrap: wrap;
 }
 
-#realisationContent ul li:after {
+.cats ul li:after {
   content: "/";
   padding: 0 0.625rem;
+}
+
+.cats ul li a:hover {
+  text-decoration: underline;
 }
 
 #plusRealisation {

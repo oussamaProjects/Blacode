@@ -9,16 +9,16 @@
                     </h1> 
                     <div class="cats">
                         <ul>
-                        <li> Dispositif Marketing2 </li> 
-                        <li> Mobile5 </li> 
-                        <li> E-CRM1 </li> 
-                        <li> Campagne2 </li> 
-                        <li> Stratégie de marque5 </li> 
-                        <li> Social média9 </li> 
-                        <li> Infographie1 </li> 
-                        <li> Motion Design2 </li> 
-                        <li> Site16 </li> 
-                        <li> Événementiel72 </li> 
+                            <li> Dispositif Marketing2 </li> 
+                            <li> Mobile5 </li> 
+                            <li> E-CRM1 </li> 
+                            <li> Campagne2 </li> 
+                            <li> Stratégie de marque5 </li> 
+                            <li> Social média9 </li> 
+                            <li> Infographie1 </li> 
+                            <li> Motion Design2 </li> 
+                            <li> Site16 </li> 
+                            <li> Événementiel72 </li> 
                         </ul>
                     </div>
                 </div>
