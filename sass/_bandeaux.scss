@@ -26,7 +26,7 @@
 			line-height: oe_rem(72px); 
 			font-weight: 400;
 		}
-		a.link{  
+		a{  
 			margin-top: oe_rem(60px); 
 			text-transform: uppercase;
 			padding: 0 oe_rem(20px);
@@ -41,24 +41,6 @@
 		}
 	} 
 
-	.cats{
-		margin: oe_rem(45px) 0;
-		ul{ 
-			font-size: oe_rem(30px);
-			line-height: oe_rem(50px);
-			list-style: none;
-			padding: 0;
-			margin: 0;
-			@include flex(center, center, row);
-			flex-wrap: wrap;
-			li{
-				&:after{
-					content: "/";
-					padding: 0 oe_rem(10px);
-				}
-			}
-		}
-	}
 
 	@include media("<md"){
 		height: oe_rem(260px);
