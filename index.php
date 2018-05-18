@@ -54,9 +54,9 @@ get_header();
 	</div>
 </section>
 
-
+<?php include 'contents/slider-actus.php'; ?>
+	
 <?php $call_to_action = get_field('call_to_action', 28);  ?>
 	<?php include 'contents/bandeau.php'; ?>
-
 <?php
 get_footer();

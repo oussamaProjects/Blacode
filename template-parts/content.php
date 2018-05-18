@@ -9,9 +9,11 @@
 
 ?>
 
-<div class="page_bandeau" style="background-image: url(<?php bloginfo( 'template_url' ) ?>/img/page_bandeau.jpg);">
-
-</div>
+<?php 
+$header_image = get_field('header_image'); 
+if($header_image){ ?> 
+	<div class="page_bandeau" style="background-image: url(<?php echo $header_image['url'] ?>);" ></div>
+<?php } ?>
 
 <div class="container">
 	<div class="row">
@@ -55,9 +57,15 @@
 	</div>
 </div>
 
-<div class="bas_page_bandeau" style="background-image: url(<?php bloginfo( 'template_url' ) ?>/img/bas_page_bandeau.jpg);">
+<?php
+$next_post = get_next_post();
+if (!empty( $next_post )): ?>
+
+<?php $header_image = get_field('header_image', $next_post->ID); ?>
+<div class="bas_page_bandeau" <?php if($header_image){ ?> style="background-image: url(<?php echo $header_image['url'] ?>);" <?php } ?> >
 	<div class="info">
-		<div class="titre">lorem ipsum</div>
-		<a href=""><?php _e('Actualité suivant','blacode') ?></a>
+		<div class="titre"><?php echo esc_attr( $next_post->post_title ); ?></div>
+		<a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>"><?php _e('Actualité suivant','blacode') ?></a> 
 	</div>
 </div>
+<?php endif; ?>

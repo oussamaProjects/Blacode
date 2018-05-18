@@ -1,0 +1,40 @@
+.rea{
+    .titre{
+        font-size: oe_rem(36px);
+        font-weight: 700;
+        line-height: oe_rem(50px);
+    }
+    .description{
+        font-size: oe_rem(24px);
+        font-weight: 300;
+        line-height: oe_rem(50px);
+    }
+    .cats{
+        font-size: oe_rem(24px);
+        font-weight: 300;
+        line-height: oe_rem(50px);
+    }
+}
+
+.projet{
+    h1{ 
+        padding-bottom: oe_rem(0);
+        font-weight: 700;
+        &:after{
+            content: none ; 
+        }
+    }
+    h2{
+        font-size: oe_rem(30px);
+        font-weight: 400;
+        line-height: oe_rem(47px);
+        padding-bottom: oe_rem(0);
+        &:after{
+            content: none ; 
+        }
+    }
+    .image{
+        margin-bottom: oe_rem(80px);
+        text-align: center;
+    }
+}

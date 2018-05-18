@@ -3384,7 +3384,7 @@ html {
 }
 
 body {
-  font-family: Helvetica, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Helvetica", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 1.375rem;
   font-weight: 300;
   line-height: 1.55;
@@ -7967,7 +7967,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: Helvetica, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Helvetica", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -8070,7 +8070,7 @@ button.close {
   display: block;
   max-width: 276px;
   padding: 1px;
-  font-family: Helvetica, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Helvetica", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -11779,7 +11779,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 /* =WordPress Core
 -------------------------------------------------------------- */
 body {
-  font-family: Helvetica, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Helvetica", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 1.375rem;
   font-weight: 300;
   line-height: 1.55;
@@ -11848,13 +11848,21 @@ h2:after, .h2:after {
 h3, .h3 {
   font-size: 1.875rem;
   line-height: 3.75rem;
+  font-family: "Alegreya Sans", Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-style: italic;
+}
+
+h4 {
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 2.9375rem;
 }
 
 p {
   font-size: 1.5rem;
   font-weight: 200;
   line-height: 3.25rem;
-  margin-bottom: 3.75rem !important;
+  margin-bottom: 2.8125rem !important;
 }
 
 p a {
@@ -11872,6 +11880,104 @@ ul {
   font-weight: 200;
   line-height: 3.25rem;
   margin-bottom: 3.75rem !important;
+}
+
+a:hover, a:focus, a:active {
+  text-decoration: none;
+}
+
+blockquote {
+  overflow: hidden;
+  margin: 2.5rem auto;
+  padding: 0 1.25rem;
+  margin-left: -1.5rem;
+  border-left: 0.3125rem solid #000;
+  font-size: 1.875rem;
+  font-style: italic;
+  line-height: 2.875rem;
+  color: #000;
+  position: relative;
+  min-height: 8.75rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+blockquote p {
+  color: #000;
+  position: absolute;
+  margin: 0;
+  left: -100%;
+  max-width: 870px;
+  transition: all 0.2s ease-in-out;
+}
+
+blockquote.show p {
+  left: 2%;
+}
+
+blockquote.hide p {
+  left: -100%;
+}
+
+@media (max-width: 767px) {
+  blockquote {
+    margin: 1.875rem auto;
+    padding: 0 0.9375rem;
+    margin-left: 0px;
+    border-left: 0.1875rem solid #000;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    min-height: auto;
+    height: auto;
+  }
+  blockquote p {
+    position: relative;
+    margin: 0;
+    left: 0;
+  }
+  blockquote.show p {
+    left: 0;
+  }
+  blockquote.hide p {
+    left: 0;
+  }
+}
+
+.site-content iframe {
+  display: block;
+  margin: 1.25rem auto 2.5rem;
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .site-content iframe {
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 575px) {
+  .site-content {
+    padding-top: 1.25rem;
+    padding-bottom: 0.625rem;
+  }
+  .site-content iframe {
+    max-height: 290px;
+  }
+}
+
+.site-content ul {
+  list-style-type: none;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 3.125rem;
+  padding: 0 !important;
+  margin-bottom: 3.75rem !important;
+}
+
+.site-content ul li:before {
+  content: '- ';
 }
 
 .alignnone {
@@ -11982,96 +12088,6 @@ a img.aligncenter {
   /* Above WP toolbar. */
 }
 
-a:hover, a:focus, a:active {
-  text-decoration: none;
-}
-
-blockquote {
-  overflow: hidden;
-  margin: 2.5rem auto;
-  padding: 0 1.25rem;
-  margin-left: -1.5rem;
-  border-left: 0.3125rem solid #000;
-  font-size: 1.875rem;
-  font-style: italic;
-  line-height: 2.875rem;
-  color: #000;
-  position: relative;
-  min-height: 8.75rem;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-}
-
-blockquote p {
-  color: #000;
-  position: absolute;
-  margin: 0;
-  left: -100%;
-  max-width: 870px;
-  transition: all 0.2s ease-in-out;
-}
-
-blockquote.show p {
-  left: 2%;
-}
-
-blockquote.hide p {
-  left: -100%;
-}
-
-@media (max-width: 767px) {
-  blockquote {
-    margin: 1.875rem auto;
-    padding: 0 0.9375rem;
-    margin-left: 0px;
-    border-left: 0.1875rem solid #000;
-    font-size: 1.25rem;
-    line-height: 2rem;
-    min-height: auto;
-    height: auto;
-  }
-  blockquote p {
-    position: relative;
-    margin: 0;
-    left: 0;
-  }
-  blockquote.show p {
-    left: 0;
-  }
-  blockquote.hide p {
-    left: 0;
-  }
-}
-
-.site-main {
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-}
-
-.site-main iframe {
-  display: block;
-  margin: 1.25rem auto 2.5rem;
-  max-width: 100%;
-}
-
-@media (max-width: 767px) {
-  .site-main iframe {
-    max-height: 500px;
-  }
-}
-
-@media (max-width: 575px) {
-  .site-main {
-    padding-top: 1.25rem;
-    padding-bottom: 0.625rem;
-  }
-  .site-main iframe {
-    max-height: 290px;
-  }
-}
-
 .info .date {
   font-weight: 300;
   color: #262626;
@@ -12141,25 +12157,11 @@ blockquote.hide p {
   margin: auto;
 }
 
-.video video {
+#video video {
   max-width: 100%;
   width: 100%;
   margin: auto;
   display: block;
-}
-
-.home_video .video video, .home_video .video iframe {
-  top: -50%;
-  position: absolute;
-  max-width: 100%;
-}
-
-@media (max-width: 767px) {
-  .home_video .video video, .home_video .video iframe {
-    top: 0%;
-    position: absolute;
-    height: 100%;
-  }
 }
 
 .pagination {
@@ -12569,6 +12571,7 @@ form .obligatoires {
   font-size: 2.25rem;
   line-height: 3.125rem;
   font-weight: 600;
+  text-shadow: 2px 1px #000;
 }
 
 .bas_page_bandeau .info a {
@@ -12927,11 +12930,13 @@ form .obligatoires {
   }
 }
 
+.main-navigation {
+  height: 3.75rem;
+}
+
 .main-navigation ul {
-  margin: 0;
+  margin: 0 !important;
   padding: 0;
-  margin-top: 15px;
-  min-height: 80px;
   list-style-type: none;
 }
 
@@ -13033,190 +13038,6 @@ form .obligatoires {
 @media (max-width: 991px) {
   .main-navigation {
     display: none;
-  }
-}
-
-#side_menu_container #side-menu {
-  /* display: none; */
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: #efefef;
-  z-index: 9;
-  width: 100%;
-  overflow-y: scroll;
-  box-shadow: 2px -1px 4px #efefef;
-  transform: translate3d(-100%, 0, 0) scale3d(1, 1, 1);
-  transition: transform 0.5s cubic-bezier(0, 0, 0.2, 1);
-}
-
-#side_menu_container #side-menu .close {
-  height: 3.75rem;
-  width: 3.75rem;
-  background-color: #000;
-  left: 0;
-  position: absolute;
-  cursor: pointer;
-}
-
-#side_menu_container #side-menu .close span {
-  position: absolute;
-  top: 50%;
-  right: 0.9375rem;
-  margin-top: -1px;
-  position: absolute;
-  display: inline-block;
-  height: 0.125rem;
-  width: 1.875rem;
-}
-
-#side_menu_container #side-menu .close span::before, #side_menu_container #side-menu .close span::after {
-  content: " ";
-  position: absolute;
-  display: inline-block;
-  height: 0.125rem;
-  width: 1.875rem;
-  background: #fff;
-}
-
-#side_menu_container #side-menu.opn {
-  transform: translate3d(0, 0, 0) scale3d(1, 1, 1) !important;
-}
-
-#side_menu_container #side-menu.opn .close {
-  left: 0px;
-}
-
-#side_menu_container #side-menu.opn .close span::before {
-  transform: translateX(0px) translateY(0px) rotate(45deg);
-}
-
-#side_menu_container #side-menu.opn .close span::after {
-  transform: translateX(0px) translateY(0px) rotate(-45deg);
-}
-
-#side_menu_container #side-menu ul {
-  margin: 0;
-  list-style: none;
-  padding: 7.5rem 0.625rem 1.25rem;
-  text-transform: uppercase;
-}
-
-#side_menu_container #side-menu ul::after {
-  display: block;
-  content: "";
-  clear: both;
-}
-
-#side_menu_container #side-menu ul li {
-  margin: 0;
-  padding: 0;
-}
-
-#side_menu_container #side-menu ul li.img_menu {
-  display: none;
-}
-
-#side_menu_container #side-menu ul li a {
-  color: #fff;
-  display: block;
-  padding: 0.625rem;
-  font-size: 1rem;
-  text-transform: uppercase;
-  position: relative;
-}
-
-#side_menu_container #side-menu ul li a.bullet.up:before {
-  content: "\f077";
-}
-
-#side_menu_container #side-menu ul li a.bullet:before {
-  content: "\f078";
-  font-size: inherit;
-  font: normal normal normal 18px/1 FontAwesome;
-  position: absolute;
-  color: white;
-  right: 15px;
-  top: 47%;
-  margin-top: -7px;
-}
-
-#side_menu_container #side-menu ul li ul {
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-  transition: all 0.2s ease-in-out;
-}
-
-#side_menu_container #side-menu ul li ul li a {
-  text-transform: none;
-  color: #fff;
-  padding: 6px 0 6px 30px;
-}
-
-#side_menu_container #side-menu ul li ul.showAll {
-  height: auto;
-  padding: 10px 0 24px;
-  animation: heightSh 0.45s linear;
-}
-
-#side_menu_container #side-menu ul li.current-menu-item {
-  background-color: #000;
-}
-
-#side_menu_container #side-menu ul li.current-menu-ancestor > a,
-#side_menu_container #side-menu ul li.current-menu-ancestor > a:before {
-  color: #000;
-  font-weight: 700;
-}
-
-#side_menu_container #side-menu ul.bottom li {
-  list-style-image: url("../images/icons/ico_arrow_right_gris.png");
-  margin-left: 80px;
-}
-
-#side_menu_container #side-menu ul.bottom li a {
-  color: #a9a9ac;
-  display: block;
-  padding: 10px 0;
-}
-
-@media (max-width: 991px) {
-  #side_menu_container #side-menu {
-    left: 0;
-    right: initial;
-    width: 450px;
-    overflow-y: none;
-  }
-}
-
-@media (max-width: 767px) {
-  #side_menu_container #side-menu {
-    left: initial;
-    right: 0;
-    width: 100%;
-    overflow-y: scroll;
-  }
-}
-
-#side_menu_container #shadow.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 8;
-  cursor: pointer;
-  background-color: rgba(31, 31, 44, 0.85);
-}
-
-@keyframes heightSh {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 
@@ -13386,6 +13207,25 @@ form .obligatoires {
   display: none;
 }
 
+.page_header.fixed_header .top_header {
+  height: 6.25rem;
+  padding: 0 1.875rem;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: initial;
+  left: 0;
+  transition: all 0.25s ease-in-out;
+  z-index: -5;
+  opacity: 0;
+}
+
+.page_header.fixed_header .top_header.show {
+  z-index: 9;
+  opacity: 1;
+}
+
 @media (max-width: 991px) {
   .page_header {
     display: -ms-flexbox;
@@ -13513,48 +13353,16 @@ form .obligatoires {
   }
 }
 
-.actualites .actualite a .bloc {
-  height: 38.125rem;
-  background-size: cover !important;
-  background-position: 50% !important;
-  padding: 3.125rem 6.875rem;
-  background-color: #efefef !important;
+.sliderActus {
+  padding: 3.125rem 0;
 }
 
-.actualites .actualite a .bloc .shadow {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(11, 13, 12, 0.35);
+.sliderActus .sliderActus .actu .image {
+  height: 30.9375rem;
+  width: 25rem;
 }
 
-.actualites .actualite a .bloc .info {
-  z-index: 3;
-  position: relative;
-}
-
-.actualites .actualite a .bloc .info .date {
-  color: #262424;
-  font-size: 1.375rem;
-  text-transform: uppercase;
-}
-
-.actualites .actualite a .bloc .info .titre {
-  color: #262424;
-  font-size: 1.625rem;
-  line-height: 2.25rem;
-  margin-top: 1.25rem;
-  transition: all 0.2s ease-in-out;
-}
-
-.actualites .actualite a:hover .bloc .info .titre {
-  border-bottom: 1px solid #fff;
-  padding-bottom: 8px;
-}
-
-.actualites .owl-theme .owl-nav {
+.sliderActus .owl-theme .owl-nav {
   position: absolute;
   top: 50%;
   right: 0;
@@ -13564,23 +13372,23 @@ form .obligatoires {
   margin-top: -1.125rem;
 }
 
-.actualites .owl-theme .owl-nav [class*='owl-'] {
+.sliderActus .owl-theme .owl-nav [class*='owl-'] {
   color: #666666;
   background: transparent;
   border-radius: 50%;
   position: absolute;
 }
 
-.actualites .owl-theme .owl-nav .owl-prev {
+.sliderActus .owl-theme .owl-nav .owl-prev {
   left: 2%;
 }
 
-.actualites .owl-theme .owl-nav .owl-next {
+.sliderActus .owl-theme .owl-nav .owl-next {
   right: 2%;
 }
 
 @media (max-width: 767px) {
-  .actualites .owl-theme .owl-nav {
+  .sliderActus .owl-theme .owl-nav {
     position: absolute;
     top: initial;
     right: 0;
@@ -13589,18 +13397,62 @@ form .obligatoires {
   }
 }
 
-@media (max-width: 1199px) {
-  .actualites .actualite a .bloc {
-    height: 25rem;
-    padding: 2.5rem 1.25rem;
-  }
+.actus_header {
+  margin-bottom: 5rem;
 }
 
-@media (max-width: 991px) {
-  .actualites .actualite a .bloc {
-    height: 25rem;
-    padding: 2.5rem 1.25rem;
-  }
+.actus_header .titre {
+  font-size: 2.5rem;
+  padding-bottom: 1.875rem;
+  margin-bottom: 1.875rem;
+  position: relative;
+}
+
+.actus_header .titre:after {
+  content: "";
+  position: absolute;
+  top: initial;
+  right: initial;
+  bottom: 0;
+  left: 0;
+  width: 5rem;
+  border: 1px solid #000;
+}
+
+.actus_header .description {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.875rem;
+}
+
+.actu {
+  margin-bottom: 2.5rem;
+}
+
+.actu .image {
+  height: 30.9375rem;
+  width: 100%;
+  background-color: #000;
+}
+
+.actu .image img {
+  min-width: 100%;
+  max-width: initial;
+  min-height: 100%;
+  max-height: initial;
+}
+
+.actu .titre {
+  font-size: 1.125rem;
+  line-height: 3.125rem;
+  font-weight: bold;
+  padding-top: 0.625rem;
+  text-transform: uppercase;
+}
+
+.actu .date {
+  font-size: 1.125rem;
+  font-weight: lighter;
 }
 
 /*---------------------------------------------------
@@ -13973,6 +13825,7 @@ form .obligatoires {
       grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 50px;
+  padding-bottom: 2.1875rem;
 }
 
 .expertises .expertise {
@@ -13993,12 +13846,16 @@ form .obligatoires {
 .expertises .expertise .description ul {
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
-  list-style: "-";
+  list-style-type: none;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 3.125rem;
   padding: 0 !important;
   margin: 0 !important;
+}
+
+.expertises .expertise .description ul li:before {
+  content: '- ';
 }
 
 .expertises .expertise:hover {
@@ -14025,395 +13882,47 @@ form .obligatoires {
   margin-top: -9.375rem;
 }
 
-/*******************************    PROCESSUS  */
-.Processus .titre {
-  color: #000;
-  font-size: 3rem;
-  line-height: 3.75rem;
-  margin: 1.25rem auto;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
+.rea .titre {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 3.125rem;
 }
 
-@media (max-width: 991px) {
-  .Processus .titre {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-}
-
-@media (max-width: 575px) {
-  .Processus .titre {
-    font-size: 1.625rem;
-    line-height: 2.125rem;
-  }
-}
-
-.Processus .entet {
-  font-size: 1rem;
-  margin: 0.625rem auto;
-  font-weight: 300;
-}
-
-.Processus #Processus #tabs {
-  border: none;
-}
-
-.Processus #Processus #tabs .ui-widget-header {
-  background: none;
-  border: none;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.Processus #Processus #tabs .nav-tabs {
-  border: none;
-}
-
-.Processus #Processus #tabs .nav-tabs li {
-  background: #fff;
-  font-weight: normal;
-  color: #efefef;
-  margin: 10px 60px;
-  width: 460px;
-  max-width: 100%;
-}
-
-.Processus #Processus #tabs .nav-tabs li a {
-  background: #fff;
-  color: #efefef;
-  text-transform: uppercase;
-  border-radius: 0;
-  border: 1px solid #efefef;
-  font-size: 1rem;
-  text-align: center;
-  transition: all 0.2s ease-in-out;
-}
-
-.Processus #Processus #tabs .nav-tabs li a.nav-link.active, .Processus #Processus #tabs .nav-tabs li a.nav-link:hover {
-  background: #efefef;
-  color: #fff;
-}
-
-.Processus #Processus #tabs .nav-tabs li:last-child {
-  margin-left: auto;
-}
-
-@media (max-width: 767px) {
-  .Processus #Processus #tabs .nav-tabs {
-    display: -ms-flexbox;
-    display: flex;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    -ms-flex-align: center;
-        align-items: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    justify-content: center;
-    -ms-flex-pack: center;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  .Processus #Processus #tabs .nav-tabs li {
-    width: 100% !important;
-    margin: 10px 0 !important;
-  }
-  .Processus #Processus #tabs .nav-tabs li a {
-    font-size: 0.875rem;
-  }
-}
-
-.Processus #Processus .bloc-phase {
-  display: -ms-flexbox;
-  display: flex;
-  padding: 3.75rem 0;
-}
-
-.Processus #Processus .bloc-phase .phase {
-  width: 42%;
-  position: relative;
-  transition: opacity 0.7s ease-out 0s;
-  visibility: visible;
-  opacity: .2;
-}
-
-.Processus #Processus .bloc-phase .phase .number {
-  font-size: 6.875rem;
-  font-weight: bold;
-  text-align: right;
-  color: #000;
-  padding: 0 2.1875rem;
-}
-
-.Processus #Processus .bloc-phase .phase .description {
+.rea .description {
   font-size: 1.5rem;
-  line-height: 2rem;
-  color: #000;
-  padding: 0 1.25rem 1.25rem;
-  position: relative;
+  font-weight: 300;
+  line-height: 3.125rem;
 }
 
-.Processus #Processus .bloc-phase .phase .description:after {
-  content: "";
-  border-bottom: 0.5rem solid #efefef;
-  position: absolute;
-  bottom: 0;
-  width: 3.75rem;
-  height: 0.75rem;
+.rea .cats {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 3.125rem;
 }
 
-.Processus #Processus .bloc-phase .phase .line {
-  position: absolute;
-  top: 72%;
-  background: rgba(162, 41, 41, 0.1) none repeat scroll 0px 0px;
-  margin: auto;
-  width: 0.5rem;
-  height: 16.875rem;
-  text-align: center;
+.projet h1 {
+  padding-bottom: 0;
+  font-weight: 700;
 }
 
-.Processus #Processus .bloc-phase .phase .line .progress {
-  height: 0;
-  background: #efefef none repeat scroll 0 0;
-  transition: height 1.2s ease-out 0s;
-  width: 100%;
+.projet h1:after {
+  content: none;
 }
 
-.Processus #Processus .bloc-phase.normal {
-  -ms-flex-direction: row;
-      flex-direction: row;
-}
-
-.Processus #Processus .bloc-phase.normal .phase .number {
-  text-align: right;
-}
-
-.Processus #Processus .bloc-phase.normal .phase .description {
-  border-left: 0.5rem solid #efefef;
-}
-
-.Processus #Processus .bloc-phase.normal .phase .description:after {
-  left: 0;
-}
-
-.Processus #Processus .bloc-phase.normal .phase .line {
-  right: -15%;
-  transform: rotate(-50deg);
-}
-
-.Processus #Processus .bloc-phase.reverse {
-  -ms-flex-direction: row-reverse;
-      flex-direction: row-reverse;
-}
-
-.Processus #Processus .bloc-phase.reverse .phase .number {
-  text-align: left;
-}
-
-.Processus #Processus .bloc-phase.reverse .phase .description {
-  border-right: 0.5rem solid #efefef;
-}
-
-.Processus #Processus .bloc-phase.reverse .phase .description:after {
-  right: 0;
-}
-
-.Processus #Processus .bloc-phase.reverse .phase .line {
-  left: -25%;
-  transform: rotate(50deg);
-}
-
-.Processus #Processus .bloc-phase:last-child .phase .line {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  .Processus #Processus .bloc-phase {
-    padding: 3.75rem 0;
-  }
-  .Processus #Processus .bloc-phase .phase {
-    width: 100%;
-  }
-  .Processus #Processus .bloc-phase .phase .description {
-    font-size: 1.25rem;
-    line-height: 1.875rem;
-    border-right: 0.5rem solid #efefef;
-    border-left: 0.5rem solid #efefef;
-  }
-  .Processus #Processus .bloc-phase .phase .line {
-    top: 50% !important;
-    right: 15% !important;
-    transform: rotate(0deg) !important;
-    margin-top: 8.125rem;
-    height: 15rem;
-  }
-  .Processus #Processus .bloc-phase.reverse .phase .line {
-    left: 15%;
-    right: initial !important;
-  }
-}
-
-#Processus #tabs {
-  border: none;
-}
-
-h2.titre {
-  color: #113a74;
-  font-size: 48px;
+.projet h2 {
+  font-size: 1.875rem;
   font-weight: 400;
-  text-transform: uppercase;
+  line-height: 2.9375rem;
+  padding-bottom: 0;
+}
+
+.projet h2:after {
+  content: none;
+}
+
+.projet .image {
+  margin-bottom: 5rem;
   text-align: center;
-}
-
-#Processus #tabs .ui-widget-header {
-  background: none;
-  border: none;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#Processus #tabs.ui-tabs .ui-tabs-nav li {
-  background: #fff;
-  font-weight: normal;
-  color: #113b74;
-  border: 1px solid #113b74;
-  border-radius: 0;
-  margin: 10px 60px;
-  text-transform: uppercase;
-  width: 460px;
-  max-width: 100%;
-}
-
-#Processus #tabs.ui-tabs .ui-tabs-nav li a {
-  color: #113b74;
-}
-
-#Processus #tabs.ui-tabs .ui-tabs-nav li:last-child {
-  margin-left: auto;
-}
-
-#Processus #tabs.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
-  float: none;
-  padding: 14px;
-  text-decoration: none;
-  display: block;
-  text-align: center;
-  font-size: 16px;
-}
-
-#Processus #tabs.ui-tabs .ui-tabs-nav li.ui-tabs-active,
-#Processus #tabs.ui-tabs .ui-tabs-nav li.ui-state-hover {
-  background: #113b74;
-  color: #fff;
-  border: 1px solid #113b74;
-}
-
-#Processus #tabs.ui-tabs .ui-tabs-nav li.ui-tabs-active a,
-#Processus #tabs.ui-tabs .ui-tabs-nav li.ui-state-hover a {
-  background: #113b74;
-  color: #fff;
-}
-
-.Processus .bloc-phase {
-  display: -ms-flexbox;
-  display: flex;
-  padding: 60px 0;
-}
-
-.Processus .bloc-phase.normal {
-  -ms-flex-direction: row;
-      flex-direction: row;
-}
-
-.Processus .bloc-phase.reverse {
-  -ms-flex-direction: row-reverse;
-      flex-direction: row-reverse;
-}
-
-.Processus .phase {
-  width: 42%;
-  position: relative;
-  transition: opacity 0.7s ease-out 0s;
-  visibility: visible;
-  opacity: .2;
-}
-
-.Processus .phase .number {
-  font-size: 110px;
-  font-weight: bold;
-  text-align: right;
-  color: #21a485;
-  padding: 0px 35px;
-}
-
-.Processus .reverse .number {
-  text-align: left;
-}
-
-.Processus .description {
-  font-size: 32px;
-  line-height: 36px;
-  color: #000;
-  padding: 0px 30px 30px;
-  position: relative;
-}
-
-.Processus .description:after {
-  content: "";
-  border-bottom: 12px solid #113a74;
-  position: absolute;
-  bottom: 0;
-  width: 60px;
-  height: 12px;
-}
-
-.Processus .normal .description {
-  border-left: 12px solid #113a74;
-}
-
-.Processus .reverse .description {
-  border-right: 12px solid #113a74;
-}
-
-.Processus .normal .description:after {
-  left: 0px;
-}
-
-.Processus .reverse .description:after {
-  right: 0px;
-}
-
-.Processus .bloc-phase .phase .line {
-  position: absolute;
-  top: 72%;
-  background: rgba(162, 41, 41, 0.1) none repeat scroll 0px 0px;
-  margin: auto;
-  width: 9px;
-  height: 270px;
-  text-align: center;
-}
-
-.Processus .bloc-phase.normal .phase .line {
-  right: -15%;
-  transform: rotate(-50deg);
-}
-
-.Processus .bloc-phase.reverse .phase .line {
-  left: -25%;
-  transform: rotate(50deg);
-}
-
-.Processus .bloc-phase .phase .line .progress {
-  height: 0;
-  background: #113a74 none repeat scroll 0px 0px;
-  transition: height 1.2s ease-out 0s;
-  width: 100%;
-}
-
-.Processus .bloc-phase:last-child .phase .line {
-  display: none;
 }
 
 /*---------------------------------------------------

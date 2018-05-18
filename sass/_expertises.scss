@@ -3,6 +3,7 @@
 	grid-template-columns: repeat(2,  1fr);
 	grid-column-gap: 30px;
 	grid-row-gap: 50px;
+	padding-bottom: oe_rem(35px);
 
 	.expertise{
 		height: oe_rem(600px);
@@ -20,12 +21,15 @@
 			ul{
 				@include transition(opacity, .3s, ease-in-out);
 				opacity: 0;
-				list-style: "-";
+				list-style-type: none;
 				font-size: oe_rem(20px);
 				font-weight: 400;
 				line-height: oe_rem(50px);
 				padding: 0 !important;
 				margin: 0 !important;
+				li:before {
+				   content: '- ';
+				}
 			}
 		}
 		&:hover{

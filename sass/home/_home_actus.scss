@@ -1,48 +1,11 @@
-.actualites{
-	.actualite{
-		a{
-			.bloc{
-				height: oe_rem(610px);
-				background-size: cover !important;
-				background-position: 50% !important;
-				padding: oe_rem(50px) oe_rem(110px);
-				background-color: $second_main_color !important;
-				.shadow{
-					@include position(absolute,0,0,0,0); 
-					background-color: rgba(11, 13, 12, 0.35); 
-				}
-				.info{
-					z-index: 3;
-					position: relative;
-					.date{
-						color: $text_color;
-						font-size: oe_rem(22px);
-						text-transform: uppercase;
-					}
-					.titre{
-						color: $text_color;
-						font-size: oe_rem(26px);
-						line-height: oe_rem(36px);
-						margin-top: oe_rem(20px);
-						@include transition();
-					}
-				}
-				
-			}
-			&:hover{ 
-				.bloc{
-					.shadow{
-					}
-					.info{
-						.titre{
-							border-bottom: 1px solid #fff;
-							padding-bottom: 8px;
-						}
-
-					}
-
-				}	
-			}
+.sliderActus{
+	padding: oe_rem(50px) 0;
+	.sliderActus{
+		.actu{
+			.image{
+				height: oe_rem(495px);
+				width: oe_rem(400px); 
+			} 
 		}
 	}
 	.owl-theme {
@@ -73,24 +36,54 @@
 	}
 
 	@include media("<xl"){
-		.actualite{
-			a{
-				.bloc{
-					height: oe_rem(400px);
-					padding: oe_rem(40px) oe_rem(20px);
-				}
-			}
-		}
 	}
 
 	@include media("<lg"){
-		.actualite{
-			a{
-				.bloc{
-					height: oe_rem(400px);
-					padding: oe_rem(40px) oe_rem(20px);
-				}
-			}
+	}
+}
+.actus_header{
+	margin-bottom: oe_rem(80px);
+	.titre{
+		font-size: oe_rem(40px);
+		padding-bottom: oe_rem(30px);
+		margin-bottom: oe_rem(30px);
+		position: relative;;
+		&:after{
+			content: "";
+			@include position(absolute, initial, initial, oe_rem(0px), 0);
+			width: oe_rem(80px);
+			border: 1px solid $main_color;
 		}
+	}
+	.description{
+		font-size: oe_rem(24px);
+		font-weight: 300;
+		line-height: oe_rem(30px);
+	}
+}
+.actu{
+	margin-bottom: oe_rem(40px);
+	.image{
+		height: oe_rem(495px);
+		width: 100%;
+		background-color: $main-color;
+		img{
+			min-width: 100%;
+			max-width: initial;
+			min-height: 100%;
+			max-height: initial;
+		}
+	}
+	.titre{
+		font-size: oe_rem(18px);
+		line-height: oe_rem(50px);
+		font-weight: bold;
+		padding-top: oe_rem(10px);
+		text-transform: uppercase;
+	}
+	.date{
+		font-size: oe_rem(18px);
+		font-weight: lighter;
+
 	}
 }

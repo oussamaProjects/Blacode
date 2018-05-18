@@ -2,42 +2,48 @@
 	.top_header{
 		height: oe_rem(150px);
 		@include flex(center, space-between, row); 
-
-
-nav{
-ul{
-	@include flex(center, flex-end, row); 
-	li{
-		a{
-			color: $main_color;
-font-size: oe_rem(14px);
-font-weight: 400;
-text-transform: uppercase;
-padding: 0 oe_rem(10px);
+		nav{
+			ul{
+				@include flex(center, flex-end, row); 
+				li{
+					a{
+						color: $main_color;
+						font-size: oe_rem(14px);
+						font-weight: 400;
+						text-transform: uppercase;
+						padding: 0 oe_rem(10px);
+					}
+				}
+			}
+			.menu-toggle{
+				display: none;
+			}
 		}
 	}
-}
-	.menu-toggle{
-		display: none;
+	&.fixed_header{
+		.top_header{
+			height: oe_rem(100px);
+			padding: 0 oe_rem(30px);
+			background-color: white;
+			@include position(fixed, 0, 0, initial, 0);
+			@include transition(all, .25s, ease-in-out);
+			z-index: -5;
+			opacity: 0;
+			&.show{
+				z-index: 9;
+				opacity: 1;
+			}
+		}
 	}
-}
-	}
-
 	@include media("<xl"){ 
-		 
 	}
-
 	@include media("<lg"){
 		@include flex(scretch, scretch, column-reverse); 
-		 
 	}
-
 	@include media("<md"){
 		@include flex(scretch, scretch, column-reverse);
-
 	}
 }
-
 
 .header_messages{
 	@include flex(center, space-between, row);
@@ -50,11 +56,10 @@ padding: 0 oe_rem(10px);
 		}
 	}
 	.first_message{
-margin-top: oe_rem(200px);
+		margin-top: oe_rem(200px);
 	}
 	.second_message{
 		margin-top: oe_rem(80px);
-
 	}
 }
 
