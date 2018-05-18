@@ -1,0 +1,226 @@
+.projets_slider{
+    position: relative;
+    margin-left: -15px;
+    height: 733px;
+}
+
+.realisation-slider-1{
+    height: 416px !important;
+    max-width: 585px !important;
+    position: absolute !important;
+    right: 0;
+    top: 154px;
+    z-index: 2 !important;
+}
+
+.realisation-slider-1 .owl-item{
+    overflow: hidden;
+}
+
+.realisation-slider-2{
+    position: absolute !important;
+    left: 0;
+    top: 78px;
+    width: 480px !important;
+    max-height: 570px !important;
+    overflow: hidden;
+}
+
+.realisation-slider-1 .owl-dots, .realisation-slider-2 .owl-dots{
+    display: none;
+}
+
+
+#slider-nav-prev img{
+    transform: rotate(-180deg);
+}
+
+.slider-controls{
+    position: absolute;
+    bottom: 62px;
+    right: -24px;
+}
+
+.slider-controls img{
+    margin: 24px;
+    cursor: pointer;
+}
+
+.realisation-slider-1 .owl-item {
+    height: 416px;
+    overflow: hidden;
+}
+
+.realisation-slider-1 .item{
+    height: 100%;
+}
+
+.realisation-slider-2 .owl-item {
+    height: 570px;
+    overflow: hidden;
+}
+
+.owl-carousel.realisation-slider-2 .owl-item img, .owl-carousel.realisation-slider-1 .owl-item img {
+    height: 100%;
+    width: auto;
+    max-width: none;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.btn-primary {
+    text-transform: uppercase;
+    padding: 0 1.25rem;
+    height: 4.625rem;
+    line-height: 4.625rem;
+    display: inline-block;
+    transition: all 0.25s ease-in-out;
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+
+.btn-primary:hover {
+    color: #000;
+    background-color: #e6e6e6;
+    border-color: black;
+}
+
+.projets_container h2 {
+    margin-top: 125px;
+}
+
+.projets_container p{
+    font-size: 1.125rem;
+}
+
+.link-en_savoir, .projets_container p a{
+    border-bottom: 1px solid #000;
+    padding-bottom: 0.3125rem;
+}
+
+.link-en_savoir{
+    margin: 0 24px;
+}
+
+.link-view_project{
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s ease;
+    background-color:rgba(0,0,0,0.5);
+    background-image: url(../img/zoom_icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.link-view_project:hover{
+    opacity: 1;
+}
+
+body.page-template-contact{
+    background: #efefef;
+}
+
+body.page-template-contact h1, .contact-form-step{
+    display: none;
+}
+
+#wpcf7-f90-p14-o1 .wpcf7-form-control:not(.wpcf7-submit), .contact-form-step .typed {
+    font-size: 48px;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 2px;
+    padding: 0;
+}
+
+.contact-form-step .typed + p, .typed-cursor + p{
+    display: none;
+}
+
+#wpcf7-f90-p14-o1 .wpcf7-form-control:not(.wpcf7-submit){
+    color:#424242;
+    border: none;
+    background-color: transparent;
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+
+#wpcf7-f90-p14-o1 .wpcf7-textarea{
+    height: 200px;
+}
+
+#wpcf7-f90-p14-o1 input:focus, #wpcf7-f90-p14-o1 textarea:focus{
+    outline: none;
+}
+
+.contact-info-container{
+    background-color: #fff;
+}
+
+.contact-content{
+    padding-top: 125px;
+    padding-bottom: 90px;
+    text-align:center;
+}
+
+.contact-content p{
+    font-size: 30px;
+}
+
+.back-img-wrapper {
+    position: absolute;
+    width: 402px;
+    height: 479px;
+    overflow: hidden;
+}
+
+.back-img-wrapper img {
+    height: 100%;
+    width: auto;
+    max-width: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.front-img-wrapper {
+    position: absolute;
+    overflow: hidden;
+    top: 64px;
+    width: 495px;
+    height: 350px;
+    right: 0;
+}
+
+.front-img-wrapper img {
+    height: 100%;
+    width: auto;
+    max-width: none;
+}
+
+.contact-info-block {
+    height: 613px;
+}
+
+.contact-info-block p {
+    font-size: 20px;
+}
+
+.contact-block-2 .back-img-wrapper{
+    right: 0;
+}
+
+.contact-block-2 .front-img-wrapper{
+    left: 0;
+}
+
+.contact-block-2 {
+    text-align: right;
+}
