@@ -224,3 +224,7 @@ body.page-template-contact h1, .contact-form-step{
 .contact-block-2 {
     text-align: right;
 }
+
+.home_header{
+    height: auto;
+}
