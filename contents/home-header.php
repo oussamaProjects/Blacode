@@ -19,25 +19,11 @@
 					</nav><!-- #site-navigation --> 
 				</div>
 
-				<div class="header_messages">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-4">
-								<div class="first_message message">
-								Contactez-nous ou rendez-vous sur <a href="https://comenscene.com"> www.comenscene.com</a>
-								</div>
-							</div>
-							<div class="offset-md-4 col-md-4">
-								<div class="second_message message">
-								Hello, comment renforcer la visibilité de mon entreprise sur internet?
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
+				<!-- <div class="header_messages">
+				</div> -->
 			</div>
 		</div>
 	</div>
+	<div id="bm"></div>
 		
 </div>
