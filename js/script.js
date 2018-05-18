@@ -25,7 +25,53 @@ jQuery(document).ready(function(){
         }
     });
 
-    	
+    jQuery('.realisation-slider-1').owlCarousel({
+        slideSpeed: 200,
+        loop:true,
+        items:1,
+        singleItem:true,
+        autoPlay: true
+    });
+
+    jQuery('.realisation-slider-2').owlCarousel({
+        slideSpeed: 200,
+        loop:true,
+        items:1,
+        singleItem:true,
+        autoPlay: true,
+        animateOut: 'fadeOut'
+    });
+    
+    jQuery('#slider-nav-prev').click(function() {
+        jQuery('.realisation-slider-1').trigger('next.owl.carousel');
+        jQuery('.realisation-slider-2').trigger('next.owl.carousel');
+    });
+
+    jQuery('#slider-nav-next').click(function() {
+        jQuery('.realisation-slider-1').trigger('prev.owl.carousel');
+        jQuery('.realisation-slider-2').trigger('prev.owl.carousel');
+    });
+
+    if(jQuery('#wpcf7-f90-p14-o1').length){
+        jQuery('#step-email').show().addClass('active');
+        var typed = new Typed('#step-email .typed', {
+            stringsElement: '#step-email .source',
+            typeSpeed: 50,
+            onComplete: function(self) {
+                jQuery('.typed-cursor').remove();
+                jQuery('#step-email input').focus();
+            }
+        });
+        jQuery('#next-step').click(function(){
+            var currenStep = jQuery('.contact-form-step.active');
+            currenStep.removeClass('active').fadeOut(700, function(){
+                currenStep.next().addClass('active').fadeIn(700);
+                if(currenStep.is('#step-subject'))
+                    jQuery('#next-step').hide();
+            });
+        });
+    }
+
 	jQuery(window).scroll(function() {
 
         if (jQuery(window).scrollTop() > 200) {

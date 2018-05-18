@@ -1,7 +1,7 @@
 {
   "name": "tmz",
   "version": "1.0.0",
-  "description": "Creation of Tanger free zone's theme",
+  "description": "Creation of Blacode theme",
   "main": "index.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
