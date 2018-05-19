@@ -13864,10 +13864,12 @@ form .obligatoires {
   height: 37.5rem;
   padding: 3.75rem 2.1875rem;
   background-color: #efefef;
+  background-size: cover;
   transition: background-color 0.3s ease-in-out;
 }
 
 .expertises .expertise .titre {
+  color: white;
   font-size: 2.5rem;
   font-weight: 600;
   padding-bottom: 0.625rem;
@@ -13892,9 +13894,11 @@ form .obligatoires {
 
 .expertises .expertise:hover {
   background-color: transparent;
+  background-image: none !important;
 }
 
 .expertises .expertise:hover .titre {
+  color: #000;
   transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
 }
 
