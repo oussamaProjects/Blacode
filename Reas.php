@@ -1,6 +1,7 @@
 <?php
 /* Template Name: Réalisation*/
-require( 'header.php' );  ?>
+require( 'header.php' );  
+$ID = get_the_ID();?>
 
 <?php 
 $args = array('post_type' => 'projet', 'posts_per_page' => 8, 'order' => 'DESC', 'orderby' => 'menu_order', 'post_status' => 'publish');
@@ -20,5 +21,8 @@ if($remaining > 0) $if_remaining = "true"; ?>
 </div>		 
 
 <!--*******************************     END realisation   -->
+
+<?php $call_to_action = get_field('call_to_action', $ID);  ?>
+<?php include 'contents/bandeau.php'; ?>
 
 <?php require( 'footer.php' ); ?>

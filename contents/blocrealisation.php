@@ -7,6 +7,20 @@
                     <div class="titre">
                         <?php the_title(); ?> 
                     </div> 
+                    <div class="cats">
+                        <ul>
+                            <li> Dispositif Marketing2 </li> 
+                            <li> Mobile5 </li> 
+                            <li> E-CRM1 </li> 
+                            <li> Campagne2 </li> 
+                            <li> Stratégie de marque5 </li> 
+                            <li> Social média9 </li> 
+                            <li> Infographie1 </li> 
+                            <li> Motion Design2 </li> 
+                            <li> Site16 </li> 
+                            <li> Événementiel72 </li> 
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -18,7 +32,9 @@
         <?php 
         $rea_image_header = get_field('rea_image_header'); 
         if($rea_image_header){ ?> 
+        <a href="<?php the_permalink( ) ?>">
         <div class="page_bandeau" style="background-image: url(<?php echo $rea_image_header['url'] ?>);" ></div>
+        </a>
         <?php } ?>
 
          <div class="container">
