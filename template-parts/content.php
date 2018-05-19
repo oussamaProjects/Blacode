@@ -17,7 +17,12 @@ if($header_image){ ?>
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-8 offset-md-2">
+		<div class="col-md-1">
+			<a href="<?php the_permalink( 10 ) ?>" class="retour"> 
+				<img src="<?php bloginfo( 'template_url' ) ?>/img/retour.png" alt="Retour">
+			</a>
+		</div>
+		<div class="col-md-8 offset-md-1">
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">

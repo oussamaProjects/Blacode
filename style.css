@@ -11811,30 +11811,31 @@ body img {
   height: initial;
 }
 
-h1, .h1 {
+.h1 {
   font-size: 3.75rem;
-  padding-bottom: 5rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
   position: relative;
 }
 
-h1:after, .h1:after {
+.h1:after {
   content: "";
   position: absolute;
   top: initial;
   right: initial;
-  bottom: 1.5625rem;
+  bottom: 0;
   left: 0;
   width: 5rem;
   border: 1px solid #000;
 }
 
-h2, .h2 {
+.h2 {
   font-size: 2.5rem;
-  padding-bottom: 5rem;
+  line-height: 3.75rem;
   position: relative;
 }
 
-h2:after, .h2:after {
+.h2:after {
   content: "";
   position: absolute;
   top: initial;
@@ -11845,24 +11846,24 @@ h2:after, .h2:after {
   border: 1px solid #000;
 }
 
-h3, .h3 {
+.h3 {
   font-size: 1.875rem;
-  line-height: 3.75rem;
+  line-height: 3.125rem;
   font-family: "Alegreya Sans", Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-style: italic;
 }
 
-h4 {
+.h4 {
   font-size: 1.875rem;
   font-weight: 400;
   line-height: 2.9375rem;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 200;
-  line-height: 3.25rem;
-  margin-bottom: 2.8125rem !important;
+  line-height: 2rem;
+  margin-bottom: 1.25rem !important;
 }
 
 p a {
@@ -11876,10 +11877,10 @@ p a:hover {
 }
 
 ul {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 200;
-  line-height: 3.25rem;
-  margin-bottom: 3.75rem !important;
+  line-height: 2rem;
+  margin-bottom: 1.875rem !important;
 }
 
 a:hover, a:focus, a:active {
@@ -11943,41 +11944,6 @@ blockquote.hide p {
   blockquote.hide p {
     left: 0;
   }
-}
-
-.site-content iframe {
-  display: block;
-  margin: 1.25rem auto 2.5rem;
-  max-width: 100%;
-}
-
-@media (max-width: 767px) {
-  .site-content iframe {
-    max-height: 500px;
-  }
-}
-
-@media (max-width: 575px) {
-  .site-content {
-    padding-top: 1.25rem;
-    padding-bottom: 0.625rem;
-  }
-  .site-content iframe {
-    max-height: 290px;
-  }
-}
-
-.site-content ul {
-  list-style-type: none;
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 3.125rem;
-  padding: 0 !important;
-  margin-bottom: 3.75rem !important;
-}
-
-.site-content ul li:before {
-  content: '- ';
 }
 
 .alignnone {
@@ -12247,6 +12213,11 @@ a img.aligncenter {
   -moz-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+}
+
+.retour {
+  display: block;
+  margin: 6.25rem 0;
 }
 
 form label {

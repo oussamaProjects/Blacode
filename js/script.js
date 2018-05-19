@@ -125,4 +125,64 @@ jQuery(document).ready(function(){
             }
         });
     }
+
+    
+
+	jQuery("#type_projet").change(function() {
+		Realisation_ajax();
+	});
+	jQuery("#prestation_select").change(function() {
+		Realisation_ajax();
+	});
+	jQuery("#date_prestations").change(function() {
+		Realisation_ajax();
+	});
+	jQuery('#plus').on("click", "#plusRealisation", function() {
+		sentData = {
+			'action': 'realisationAction',
+			// 'type_projet': jQuery("#type_projet").val(),
+			'pagination': jQuery(".plus").data("pagination"),
+			'ifremaining': jQuery(".plus").data("ifremaining"),
+			'viewed': jQuery(".plus").data("viewed")
+		};
+		Realisation_ajax(sentData);
+		return false;
+	});
+
+	function Realisation_ajax(sentData) {
+		data = {
+			'action': 'realisationAction',
+			// 'type_projet': jQuery("#type_projet").val(),
+			'ifremaining': jQuery(".plus").data("ifremaining"),
+		};
+		if (!jQuery.isEmptyObject(sentData))
+			data = sentData;
+		jQuery.ajax({
+			url: ajaxurl,
+			type: "post",
+			data: data,
+			beforeSend: function() {
+				jQuery("#ajaxloader").show();
+				jQuery("#ajaxShadow").show();
+			},
+			success: function(response) {
+                console.log(response);
+				jQuery("#realisationContent").html(response);
+				jQuery('#plus').on("click", "#plusRealisation", function() {
+					sentData = {
+						'action': 'realisationAction',
+						// 'type_projet': jQuery("#type_projet").val(),
+						'pagination': jQuery(".plus").data("pagination"),
+						'ifremaining': jQuery(".plus").data("ifremaining"),
+						'viewed': jQuery(".plus").data("viewed")
+					};
+					Realisation_ajax(sentData);
+					return false;
+				});
+				jQuery("#ajaxloader").hide();
+				jQuery("#ajaxShadow").hide();
+			}
+		});
+	}
+
 });
