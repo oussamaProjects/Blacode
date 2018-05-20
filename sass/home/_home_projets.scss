@@ -2,49 +2,116 @@
 
 	height: oe_rem(735px);
 	background-color: $second_main_color;
- margin-bottom: oe_rem(80px);
+ 	margin-bottom: oe_rem(80px);
+	 
 
-	.owl-theme {
-		.owl-nav { 
-			[class*='owl-'] {
-				color: $main_color;
-				background: $white !important;
-				border: oe_rem(1px) solid $lighter_color;
-				background: transparent;
-				border-radius: 50%; 
-				height: oe_rem(30px);
-				width: oe_rem(30px);
-				padding: oe_rem(2.5px) 0;
-				margin: 0px oe_rem(8px);
-				@include transition();
-				&:hover {
-					color: $white;
-					background: $main_color !important; 
-					border: 1px solid $main_color;
-				}
-			}
-			@include position(absolute, 0%, initial, initial, 50%);
-			margin: 0;
-			margin-left: oe_rem(20px);
-		}
-	}
-
-	@include media("<lg"){
-		.owl-theme { 
-			.owl-nav { 		
-				@include position(absolute, initial, 0, 0, initial);
-				margin: 0; 
+	.projets_slider{
+		position: relative;
+		margin-left: -15px;
+		height: 733px;
+			
+		.realisation-slider-1{
+			height: 416px !important;
+			max-width: 585px !important;
+			position: absolute !important;
+			right: 0;
+			top: 154px;
+			z-index: 2 !important;
+			.owl-item{
+				overflow: hidden; 
+				height: 416px;
+				overflow: hidden;
+			} 
+			.item{
+				height: 100%;
 			}
 		}
-	}
-
-	@include media("<md"){
-		.owl-theme { 
-			.owl-nav { 		
-				@include position(absolute, initial, 0, 0, initial);
-				margin: 0; 
+		.realisation-slider-2{
+			position: absolute !important;
+			left: 0;
+			top: 78px;
+			width: 480px !important;
+			max-height: 570px !important;
+			overflow: hidden;
+			.owl-item {
+				height: 570px;
+				overflow: hidden;
 			}
 		}
+
+		.realisation-slider-1 .owl-dots, 
+		.realisation-slider-2 .owl-dots{
+			display: none;
+		}
+		
+		.owl-carousel.realisation-slider-2 .owl-item img, 
+		.owl-carousel.realisation-slider-1 .owl-item img {
+			height: 100%;
+			width: auto;
+			max-width: none;
+			position: relative;
+			display: inline-block;
+			left: 50%;
+			transform: translate(-50%);
+		}
+
 	}
+
+
+	h2 {
+		margin-top: 125px;
+	}
+	p{
+		font-size: 1.125rem;
+		a{
+			border-bottom: 1px solid #000;
+			padding-bottom: 0.3125rem;
+		}
+	}
+	
+
+
+	#slider-nav-prev{
+		 img{
+			transform: rotate(-180deg);
+		}
+	}
+	
+	.slider-controls{
+		position: absolute;
+		bottom: 62px;
+		right: -24px;
+		img{
+			margin: 24px;
+			cursor: pointer;
+		}
+	}
+	  
+	
+	.link-en_savoir{
+		border-bottom: 1px solid #000;
+		padding-bottom: 0.3125rem; 
+		margin: 0 24px;
+	}
+	
+	.link-view_project{
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		opacity: 0;
+		transition: opacity .5s ease;
+		background-color:rgba(0,0,0,0.5);
+		background-image: url(./img/zoom_icon.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		
+		&:hover{
+			opacity: 1;
+		}
+	}
+	
 
 }

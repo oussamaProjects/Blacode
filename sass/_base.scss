@@ -423,3 +423,41 @@ a img.aligncenter {
 	display: block;
 	margin: oe_rem(100px) 0;
 }
+
+
+.btn-custom {
+	margin-top: oe_rem(60px); 
+	text-transform: uppercase;
+	padding: 0 oe_rem(20px);
+	height: oe_rem(74px);
+	line-height: oe_rem(74px);
+	display: inline-block;
+	border: 1px solid transparent;
+	@include transition(all, .25s, ease-in-out);
+	@include button-variant(#fff, $main_color, $main_color);
+	&:hover {
+		@include button-variant($main_color, #fff, $main_color);
+	}
+}
+
+
+
+.GoToHeader{
+    height: oe_rem(85px);
+    width: oe_rem(85px); 
+	background-image: url('./img/GoToHeader.png');
+    @include position(fixed, initial, oe_rem(100px), oe_rem(100px), initial); 
+    opacity: 0;
+    visibility: hidden; 
+    z-index: 99999999;
+    transition: all 0.5s ease-in-out;
+    &.show {
+        visibility:visible;
+        cursor:pointer;
+        opacity: 1.0;
+    } 
+    @include media("<xl"){
+        display: none;
+    } 
+    
+}

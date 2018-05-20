@@ -182,7 +182,22 @@ jQuery(document).ready(function(){
 				jQuery("#ajaxShadow").hide();
 			}
 		});
-	}
+    }
+    
+
+    jQuery(document).on( 'scroll', function(){
+        if (jQuery(window).scrollTop() > 100) {
+            jQuery('.GoToHeader').addClass('show');
+        } else {
+            jQuery('.GoToHeader').removeClass('show');
+        }
+      });
+      
+      jQuery('.GoToHeader').click(function(){
+        jQuery('html').animate({scrollTop:0}, 'slow');
+        return false;
+      }); 
+      
 
 });
 
