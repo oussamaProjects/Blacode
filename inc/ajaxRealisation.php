@@ -2,16 +2,22 @@
 //Ajax filtre projets
 add_action( 'wp_ajax_realisationAction', 'realisationAction' );
 add_action( 'wp_ajax_nopriv_realisationAction', 'realisationAction' );
+
 function realisationAction(){
 
-	$args = array('post_type' => 'projets', 'order' => 'DESC', 'orderby' => 'menu_order', 'post_status' => 'publish');
+	$args = array(
+		'post_type' 	=> 'projets', 
+		'order' 		=> 'DESC', 
+		'orderby' 		=> 'menu_order', 
+		'post_status' 	=> 'publish'
+	);
 
 	if ( isset($_POST["cat_projet"])  && $_POST["cat_projet"] != "0" ){
 		$args['tax_query'] =  array(
 			array(
-				'taxonomy' => 'type',
-				'field' => 'id',
-				'terms' => $_POST["cat_projet"]
+				'taxonomy' 	=> 'type',
+				'field' 	=> 'id',
+				'terms' 	=> $_POST["cat_projet"]
 			)
 		);
 	}
@@ -42,6 +48,9 @@ function realisationAction(){
 	else $if_remaining = "false";
 
 	$a = 0 ;
+
+	json_decode($realisations);
+	
 
 	include( realpath(dirname(__FILE__).'/..').'/contents/blocRealisations.php' );
 

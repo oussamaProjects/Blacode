@@ -125,15 +125,15 @@ function blacode_scripts() {
 	wp_enqueue_style( 'blacode-font-roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' );
 	wp_enqueue_style( 'blacode-font-alegreya-sans', 'https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700i' );
 	wp_enqueue_style( 'blacode-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'blacode-style-2', get_template_directory_uri() . '/other_css/custom_style.css' );
-	wp_enqueue_style( 'owl.carousel', 			get_template_directory_uri() . '/js/libs/owl.carousel/dist/assets/owl.carousel.min.css');
+	wp_enqueue_style( 'blacode-style-2', 		get_template_directory_uri() . '/other_css/custom_style.css' );
+	wp_enqueue_style( 'owl.carousel', 			get_template_directory_uri() . '/js/libs/owl.carousel/src/css/owl.carousel.css');
 	
 
 	wp_enqueue_script( 'jquery', 				get_template_directory_uri() . '/js/libs/jquery/dist/js/jquery.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'tether', 				get_template_directory_uri() . '/js/libs/tether/dist/js/tether.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'bootstrap', 			get_template_directory_uri() . '/js/libs/bootstrap/dist/js/bootstrap.min.js', array(), '20151215', true );
-	wp_enqueue_script( 'owl.carousel', 			get_template_directory_uri() . '/js/libs/owl.carousel/dist/owl.carousel.min.js', array(), '20151215', true );
-	wp_enqueue_script( 'typed.js', 		get_template_directory_uri() . '/js/libs/typed.js/lib/typed.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'owl.carousel', 			get_template_directory_uri() . '/js/libs/owl.carousel/src/js/owl.carousel.js', array(), '20151215', true );
+	wp_enqueue_script( 'typed.js', 				get_template_directory_uri() . '/js/libs/typed.js/lib/typed.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'blacode-navigation', 	get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	if(is_home()){
@@ -179,4 +179,5 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
  
+require get_template_directory() . '/inc/ajaxRealisation.php';
 require get_template_directory() . '/inc/ajaxActualites.php';

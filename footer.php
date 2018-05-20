@@ -33,6 +33,12 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+<script type="text/javascript">   var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>"; </script> 
+
+<div id="ajaxShadow">
+	<div id="ajaxloader"></div>
+</div>
+
 <?php wp_footer(); ?>
 
 </body>

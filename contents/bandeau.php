@@ -6,15 +6,17 @@ $background_image = get_field('background_image'); ?>
 
 <section class="bandeau" <?php if(isset($background_image)){ ?> style="background-image: url(<?php $background_image['url'] ?>);" <?php } ?>>
 	<div class="info">
-		<div class="conatiner">
+		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="titre">
-						<?php the_title( ) ?> 
+						<?php the_title( ); ?> 
 					</div>
-					<div class="description">
+					<?php if(  get_field('description') != null ){ ?>
+						<div class="description">
 						<?php the_field('description'); ?> 		
 					</div>
+					<?php } ?>
 					<?php
 						$lien = '';
 						$lien_interne = get_field('lien_interne');
@@ -50,6 +52,104 @@ $background_image = get_field('background_image'); ?>
 						</div>
 					</div>
 				<?php } ?>
+
+
+				<?php if( $ID == 6 ){ ?>
+					<div class="col-md-12">
+						<div class="rencontrons-nous">
+							<div class="bloc">
+								<div class="titre"><?php _e('France','blacode'); ?></div>
+								<div class="pictos">
+									<div class="pictos_tab">
+										<div class="tab">
+											<button class="tablinks" onclick="openCity(event, 'smartphone')" id="defaultOpen">
+												<img src="<?php bloginfo( 'template_url' ) ?>/img/smartphone.png" alt="">
+												<img class="form" src="<?php bloginfo( 'template_url' ) ?>/img/form.png" alt="">
+											</button>
+											<button class="tablinks" onclick="openCity(event, 'placeholder-outline')">
+												<img src="<?php bloginfo( 'template_url' ) ?>/img/placeholder-outline.png" alt="">												
+												<img class="form" src="<?php bloginfo( 'template_url' ) ?>/img/form.png" alt="">
+											</button>
+											<button class="tablinks" onclick="openCity(event, 'flying-paper-plane')">
+												<img src="<?php bloginfo( 'template_url' ) ?>/img/flying-paper-plane.png" alt="">												
+												<img class="form" src="<?php bloginfo( 'template_url' ) ?>/img/form.png" alt="">
+											</button>
+										</div>
+
+										<!-- Tab content -->
+										<div id="smartphone" class="tabcontainer tabcontent">
+											<span>+ 123 456 789</span>
+										</div>
+
+										<div id="placeholder-outline" class="tabcontainer tabcontent">
+											<span>+ 212 6 02 45 67 89</span> 
+										</div>
+
+										<div id="flying-paper-plane" class="tabcontainer tabcontent">
+											<span>send</span>
+										</div>
+									</div>
+								</div>
+							</div> 
+
+							<div class="bloc">
+								<div class="titre"><?php _e('Maroc','blacode'); ?></div>
+								<div class="pictos">
+									<div class="pictos_tab">
+										<div class="tab">
+											<button class="tablinks_1" onclick="openCity_1(event, 'smartphone_1')" id="defaultOpen_1">
+												<img src="<?php bloginfo( 'template_url' ) ?>/img/smartphone.png" alt="">
+												<img class="form" src="<?php bloginfo( 'template_url' ) ?>/img/form.png" alt="">
+											</button>
+											<button class="tablinks_1" onclick="openCity_1(event, 'placeholder-outline_1')">
+												<img src="<?php bloginfo( 'template_url' ) ?>/img/placeholder-outline.png" alt="">												
+												<img class="form" src="<?php bloginfo( 'template_url' ) ?>/img/form.png" alt="">
+											</button>
+											<button class="tablinks_1" onclick="openCity_1(event, 'flying-paper-plane_1')">
+												<img src="<?php bloginfo( 'template_url' ) ?>/img/flying-paper-plane.png" alt="">												
+												<img class="form" src="<?php bloginfo( 'template_url' ) ?>/img/form.png" alt="">
+											</button>
+										</div>
+
+										<!-- Tab content -->
+										<div id="smartphone_1" class="tabcontainer tabcontent_1">
+											<span>+ 123 456 789</span>
+										</div>
+
+										<div id="placeholder-outline_1" class="tabcontainer tabcontent_1">
+											<span>+ 212 6 02 45 67 89</span> 
+										</div>
+
+										<div id="flying-paper-plane_1" class="tabcontainer tabcontent_1">
+											<span>send</span>
+										</div>
+									</div>
+								</div>
+							</div> 
+
+
+							<div class="bloc">
+								<div class="titre"><?php _e('Ailleurs','blacode'); ?></div>
+								<div class="pictos">
+									 <div class="reseaux_links">
+										 <a href="#">
+										 	<i class="fab fa-facebook-square"></i>
+										 </a>
+										 <a href="#">
+										 	<i class="fab fa-linkedin"></i>
+										 </a>
+										 <a href="#">
+										 	<i class="fab fa-instagram"></i>
+										 </a>
+									 </div>
+								</div>
+							</div> 
+ 
+						</div>
+					</div>
+				<?php } ?>
+
+
 			</div>
 		</div>
 	</div>

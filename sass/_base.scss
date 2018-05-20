@@ -33,6 +33,7 @@ body {
 
 .h1 {
 	font-size: oe_rem(60px);
+	line-height: oe_rem(80px);
 	padding-bottom: oe_rem(20px);
 	margin-bottom: oe_rem(20px);
 	position: relative;
@@ -47,10 +48,12 @@ body {
 .h2 {
 	font-size: oe_rem(40px); 
 	line-height: oe_rem(60px);
+	padding-bottom: oe_rem(20px);
+	margin-bottom: oe_rem(20px);
 	position: relative;
 	&:after{
 		content: "";
-		@include position(absolute, initial, initial, oe_rem(25px), 0);
+		@include position(absolute, initial, initial, 0, 0);
 		width: oe_rem(80px);
 		border: 1px solid $main_color;
 	}
@@ -73,8 +76,8 @@ body {
 p{
 	font-size: oe_rem(18px);
 	font-weight: 200;
-	line-height: oe_rem(32px);
-	margin-bottom: oe_rem(20px) !important; 
+	line-height: oe_rem(38px);
+	margin-bottom: oe_rem(30px) !important; 
 	a{
 		font-weight: 400;
 		@include transition(all, .25s, ease-in-out);
@@ -92,6 +95,9 @@ ul{
 	margin-bottom: oe_rem(30px) !important; 
 }
 
+#wpadminbar .quicklinks ul{
+	margin-bottom: oe_rem(0px) !important; 
+}
 
 a{
 	&:hover,

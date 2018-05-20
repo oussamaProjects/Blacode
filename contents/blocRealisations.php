@@ -3,22 +3,18 @@
     <div class="container">
         <div class="row">
             <div class="offset-md-2 col-md-8">
-                <div class="rea"> 
-                    <div class="titre">
+                <div class="rea_head"> 
+                    <h1 class="h2">
                         <?php the_title(); ?> 
-                    </div> 
+                    </h1> 
                     <div class="cats">
                         <ul>
-                            <li> Dispositif Marketing2 </li> 
-                            <li> Mobile5 </li> 
-                            <li> E-CRM1 </li> 
-                            <li> Campagne2 </li> 
-                            <li> Stratégie de marque5 </li> 
-                            <li> Social média9 </li> 
-                            <li> Infographie1 </li> 
-                            <li> Motion Design2 </li> 
-                            <li> Site16 </li> 
-                            <li> Événementiel72 </li> 
+                            <?php  $args = array( 
+                                'title_li' => '',
+                                'taxonomy' => 'cat_projet',
+                                'hide_empty' => false,
+                            );
+                            wp_list_categories( $args ); ?>
                         </ul>
                     </div>
                 </div>
@@ -47,8 +43,8 @@
                         <div class="description">
                             <?php the_excerpt(); ?>
                         </div>
-                        <div class="cats">
-                            <?php   ?>
+                        <div class="post_cats">
+                            <?php the_terms( get_the_ID(), 'cat_projet', '', ' - ' ); ?>
                         </div>
                     </div>
                 </div>
@@ -61,18 +57,17 @@
 
 
     <?php if($remaining>0){ ?>
-    <div class="rea" id="plus">
-        <a id="plusrealisation">
-            <div class="plus_realisation">
-                <div class="plus" data-ifremaining="<?php echo $if_remaining ?>" data-viewed="<?php echo $viwed ?>" data-pagination="<?php echo $pagination ?>" data-remaining="<?php echo $remaining ?>" >
-                    <span>+</span><?php echo $remaining ?>
+        <div class="rea" id="plus">
+            <a id="plusrealisation">
+                <div class="plus_realisation">
+                    <div class="plus" data-ifremaining="<?php echo $if_remaining ?>" data-viewed="<?php echo $viwed ?>" data-pagination="<?php echo $pagination ?>" data-remaining="<?php echo $remaining ?>" >
+                        <?php echo __('Plus de projets','blacode'); ?>
+                    </div> 
                 </div>
-                <div class="slug_plus">autres Réalisation</div>
-            </div>
-        </a>
-    </div>
+            </a>
+        </div>
     <?php }else{ ?>
-    <input type="hidden" class="plus" data-ifremaining="<?php echo $if_remaining ?>" data-viewed="<?php echo $viwed ?>" data-pagination="<?php echo $pagination ?>" data-remaining="<?php echo $remaining ?>" /> 
+        <input type="hidden" class="plus" data-ifremaining="<?php echo $if_remaining ?>" data-viewed="<?php echo $viwed ?>" data-pagination="<?php echo $pagination ?>" data-remaining="<?php echo $remaining ?>" /> 
     <?php } ?>
         
 

@@ -19,5 +19,9 @@
     "font-awesome": "fontawesome#^4.7.0",
     "owl.carousel": "owl2#^0.1.0",
     "include-media": "^1.4.9"
+  },
+  "devDependencies": {
+    "typed": "*",
+    "typed.js": "^2.0.6"
   }
 }
