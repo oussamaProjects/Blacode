@@ -225,8 +225,20 @@
 					border-top: 1px solid $darker_color; 
 				}
 
-				.reseaux_links{
-					@include flex(flex-start, space-between, row);
+			}
+			.reseaux_links{
+				@include flex(flex-start, center, row);
+				a{
+					padding: oe_rem(5px);
+					@include transition(all, .25s, ease-in-out);
+					i{
+						font-size: oe_rem(44px);
+					}
+					&:hover{
+						i{
+							opacity: .7;
+						}
+					}
 				}
 			}
 		}

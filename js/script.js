@@ -8,7 +8,7 @@ jQuery(document).ready(function(){
         autoplayTimeout:1000,
         autoplayHoverPause:true,		
         loop:true,
-        margin:0,
+        margin: 50,
         dots: false,
         nav:true,	 
         navText: ['<i class="fa fa-angle-left fa-lg" aria-hidden="true"></i>','<i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>'],
