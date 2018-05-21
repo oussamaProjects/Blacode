@@ -26,22 +26,40 @@
 			line-height: oe_rem(72px); 
 			font-weight: 400;
 		}
-		a{  
+		a.link{  
 			margin-top: oe_rem(60px); 
 			text-transform: uppercase;
 			padding: 0 oe_rem(20px);
 			height: oe_rem(74px);
 			line-height: oe_rem(74px);
 			display: inline-block;
+			border: 1px solid transparent;
 			@include transition(all, .25s, ease-in-out);
 			@include button-variant(#fff, $main_color, $main_color);
 			&:hover{
-			@include button-variant($main_color, #fff, $main_color);
+				@include button-variant($main_color, #fff, $main_color);
 			}
 		}
 	} 
 
-
+	.cats{
+		margin: oe_rem(45px) 0;
+		ul{ 
+			font-size: oe_rem(30px);
+			line-height: oe_rem(50px);
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			@include flex(center, center, row);
+			flex-wrap: wrap;
+			li{
+				&:after{
+					content: "/";
+					padding: 0 oe_rem(10px);
+				}
+			}
+		}
+	}
 	@include media("<md"){
 		height: oe_rem(260px);
 		img{
@@ -110,6 +128,7 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
+
 	.info{
 		position: absolute;
 		top:0;
@@ -119,6 +138,7 @@
 		z-index: 3; 
 		text-align: center;
 		@include flex(center, center, column);
+
 		.titre{
 			color: #fff;
 			font-size: oe_rem(36px); 
@@ -151,3 +171,76 @@
 
 }
 
+
+
+.rencontrons-nous{
+	padding-top: oe_rem(60px);
+	@include flex(flex-start, space-between, row);
+	.bloc{
+		.titre{
+			font-size: oe_rem(48px);
+			text-transform: uppercase;
+			font-weight: 300;
+		}
+		.pictos{
+			.pictos_tab{
+				width: oe_rem(225px);
+				.tab {
+					// overflow: hidden;  
+					@include flex(flex-start, center, row);
+					button {  
+						outline: none;
+						border: none;
+						cursor: pointer;
+						position: relative;
+						padding: oe_rem(12px);
+						padding-bottom: oe_rem(10px);  
+						height: oe_rem(100px);
+						width: oe_rem(60px);
+						background-color: transparent;
+						img{
+							width: auto;
+						}
+						.form{							
+							@include position(absolute, initial, initial, -1px, oe_rem(10px));
+							// @include transition(opacity, .15s, ease-in-out);
+							width: oe_rem(40px);
+							background: $second_main_color;
+							opacity: 0;
+						}
+						&:hover {
+						} 
+						&.active { 
+							.form{		
+								opacity: 1;
+							}
+						}
+					}
+				} 
+ 
+				.tabcontainer {
+					display: none;
+					padding: oe_rem(10px);
+					text-align: center;
+					border-top: 1px solid $darker_color; 
+				}
+
+			}
+			.reseaux_links{
+				@include flex(flex-start, center, row);
+				a{
+					padding: oe_rem(5px);
+					@include transition(all, .25s, ease-in-out);
+					i{
+						font-size: oe_rem(44px);
+					}
+					&:hover{
+						i{
+							opacity: .7;
+						}
+					}
+				}
+			}
+		}
+	}
+}

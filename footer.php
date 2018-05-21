@@ -33,6 +33,15 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+
+<a href="#GoToHeader" class="GoToHeader"></a>
+
+<script type="text/javascript">   var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>"; </script> 
+
+<div id="ajaxShadow">
+	<div id="ajaxloader"></div>
+</div>
+
 <?php wp_footer(); ?>
 
 </body>

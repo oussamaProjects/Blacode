@@ -30,7 +30,8 @@ get_header();
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-	<?php $call_to_action = get_field('call_to_action', get_the_ID());  ?>
+	<?php $ID = get_the_ID();
+	$call_to_action = get_field('call_to_action', $ID);  ?>
 	<?php include 'contents/bandeau.php'; ?>
 
 <?php 
