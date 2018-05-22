@@ -36,7 +36,7 @@
 				<?php endif; ?>
 			</div>
 		</div>
-		<div class="offset-md-1 col-md-5">
+		<div class="col-md-5">
 			<h2 class="h2"><?php the_field('rea__block_title'); ?></h2>
 			<p><?php the_field('rea__block_text', false, false); ?></p>
 			<a href="<?php the_field('rea__url_bouton'); ?>" class="btn-custom"><?php the_field('rea__texte_bouton'); ?></a>
