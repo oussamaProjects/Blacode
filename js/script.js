@@ -25,21 +25,26 @@ jQuery(document).ready(function(){
         }
     });
 
-    jQuery('.realisation-slider-1').owlCarousel({
-        slideSpeed: 200,
-        loop:true,
-        items:1,
-        singleItem:true,
-        autoPlay: true
-    });
-
     jQuery('.realisation-slider-2').owlCarousel({
-        slideSpeed: 200,
+        slideSpeed: 100,
         loop:true,
         items:1,
         singleItem:true,
         autoPlay: true,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:false,
         animateOut: 'fadeOut'
+    });
+
+      jQuery('.realisation-slider-1').owlCarousel({
+        slideSpeed: 100,
+        loop:true,
+        items:1,
+        singleItem:true,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:false
     });
     
     jQuery('#slider-nav-prev').click(function() {
@@ -53,13 +58,13 @@ jQuery(document).ready(function(){
     });
 
     if(jQuery('#wpcf7-f90-p14-o1').length){
-        jQuery('#step-email').show().addClass('active');
-        var typed = new Typed('#step-email .typed', {
-            stringsElement: '#step-email .source',
+        jQuery('#step-name').show().addClass('active');
+        var typed = new Typed('#step-name .typed', {
+            stringsElement: '#step-name .source',
             typeSpeed: 50,
             onComplete: function(self) {
                 jQuery('.typed-cursor').remove();
-                jQuery('#step-email input').focus();
+                jQuery('#step-name input').focus();
             }
         });
         jQuery('#next-step').click(function(){

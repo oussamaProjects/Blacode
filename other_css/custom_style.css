@@ -1,0 +1,21 @@
+.projets_container .col-md-5:last-child{
+    margin-left:3%;
+}
+
+.projets_container .btn-custom{
+    font-size: 1.125rem;
+}
+
+#wpcf7-f90-p14-o1 .wpcf7-submit, #next-step {
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    background-color: #000;
+    border: none;
+    width: 190px;
+    height: 67px;
+    line-height: 67px;
+}
+
+#wpcf7-f90-p14-o1 .wpcf7-submit:focus, #next-step:focus{
+    color:#fff;
+}
