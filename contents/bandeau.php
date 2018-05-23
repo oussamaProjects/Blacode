@@ -2,9 +2,10 @@
 if( isset($call_to_action) && !empty($call_to_action)){ 
 $post = $call_to_action;
 setup_postdata( $post ); 
-$background_image = get_field('background_image'); ?> 	
 
-<section class="bandeau" <?php if(isset($background_image)){ ?> style="background-image: url(<?php $background_image['url'] ?>);" <?php } ?>>
+$background_image = get_field('background_image');  ?> 	
+
+<section class="bandeau" <?php if(isset($background_image)){ ?> style="background-image: url(<?php echo $background_image['url']; ?>);" <?php } ?>>
 	<div class="info">
 		<div class="container">
 			<div class="row">
@@ -78,15 +79,15 @@ $background_image = get_field('background_image'); ?>
 
 										<!-- Tab content -->
 										<div id="smartphone" class="tabcontainer tabcontent">
-											<span>+ 123 456 789</span>
+											<span><a href="tel:+33176410426">+33 1 76 41 04 26</a></span>
 										</div>
 
 										<div id="placeholder-outline" class="tabcontainer tabcontent">
-											<span>+ 212 6 02 45 67 89</span> 
+											<span>6 rue du Bois Sauvage - Évry</span> 
 										</div>
 
 										<div id="flying-paper-plane" class="tabcontainer tabcontent">
-											<span>send</span>
+											<span><a href="mailto:hello@blacode.fr">hello@blacode.fr</a></span>
 										</div>
 									</div>
 								</div>
@@ -113,15 +114,15 @@ $background_image = get_field('background_image'); ?>
 
 										<!-- Tab content -->
 										<div id="smartphone_1" class="tabcontainer tabcontent_1">
-											<span>+ 123 456 789</span>
+											<span><a href="tel:+212539321118">+212 5 39 32 11 18</a></span>
 										</div>
 
 										<div id="placeholder-outline_1" class="tabcontainer tabcontent_1">
-											<span>+ 212 6 02 45 67 89</span> 
+											<span>8 rue Al Farabi - Tanger</span> 
 										</div>
 
 										<div id="flying-paper-plane_1" class="tabcontainer tabcontent_1">
-											<span>send</span>
+											<span><a href="mailto:contact@comenscence.com">contact@comenscence.com</a></span>
 										</div>
 									</div>
 								</div>
@@ -132,15 +133,15 @@ $background_image = get_field('background_image'); ?>
 								<div class="titre"><?php _e('Ailleurs','blacode'); ?></div>
 								<div class="pictos">
 									 <div class="reseaux_links">
-										 <a href="#">
+										 <a target="_blank" href="https://www.facebook.com/agenceblacode">
 										 	<i class="fab fa-facebook-square"></i>
 										 </a>
-										 <a href="#">
+										 <a target="_blank" href="https://www.linkedin.com/in/virginie-ruyer-zen-nan-94249048">
 										 	<i class="fab fa-linkedin"></i>
 										 </a>
-										 <a href="#">
+										 <!-- <a href="#">
 										 	<i class="fab fa-instagram"></i>
-										 </a>
+										 </a> -->
 									 </div>
 								</div>
 							</div> 

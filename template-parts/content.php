@@ -69,7 +69,7 @@ if (!empty( $next_post )): ?>
 <div class="bas_page_bandeau" <?php if($header_image){ ?> style="background-image: url(<?php echo $header_image['url'] ?>);" <?php } ?> >
 	<div class="info">
 		<div class="titre"><?php echo esc_attr( $next_post->post_title ); ?></div>
-		<a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>"><?php _e('Actualité suivant','blacode') ?></a> 
+		<a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>"><?php _e('Actualité suivante','blacode') ?></a> 
 	</div>
 </div>
 <?php endif; ?>

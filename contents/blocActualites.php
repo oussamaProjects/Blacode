@@ -19,19 +19,22 @@
     <?php while ( $Actualites->have_posts() ) : $Actualites->the_post(); $i++; ?>
 
         <div class="col-md-4">
-            <a href="<?php the_permalink( ) ?>">
-                <div class="actu">
-                    <div class="image">
+            <div class="actu">
+                <div class="image">
+                    <a href="<?php the_permalink( ) ?>">
                         <?php the_post_thumbnail( ); ?>
-                    </div>
-                    <div class="titre">
-                        <?php the_title(); ?> 
-                    </div>
-                    <div class="date">
-                        <?php echo get_the_date( ); ?>
-                    </div>
+                        <div class="hover"></div>
+                    </a>
                 </div>
-            </a>
+                <div class="titre">
+                    <a href="<?php the_permalink( ) ?>">
+                        <?php the_title(); ?> 
+                    </a>
+                </div>
+                <div class="date">
+                    <?php echo get_the_date( 'j/m/Y'); ?>
+                </div>
+            </div>
         </div>
 
     <?php endwhile; ?>

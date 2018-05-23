@@ -14,17 +14,20 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-1">
 					<img src="<?php bloginfo( 'template_url' ) ?>/img/logo_footer.png" alt="">
 				</div>
-				<div class="col-md-8">
+				<div class="col-md-11">
 				
 				<ul class="footer-info">
-				<li><i class="fa fa-envelope"></i><a href="mailto:bonjour@blacode.com">bonjour@blacode.com</a></li>
-				<li><i class="fa fa-fix"></i><a href="tel:0123458939">01 23 45 89 39</a></li>
-				<li><i class="fa fa-fix"></i><span>Chemin Challet 870000 LIMOGES</span></li>
+				<li>copyright Blacode 2018</li>
+				<li><a href="<?php the_permalink( 173 ) ?>">Mentions légales</a></li>
+				<li><a href="<?php the_permalink( 175 ) ?>">Conditions Générales de vente</a></li>
+				<li><i class="fa fa-envelope"></i><a href="mailto:hello@blacode.fr">hello@blacode.fr</a></li>
+				<li><i class="fa fa-fix"></i><a href="tel:0176410426">01 76 41 04 26</a></li>
+				<li><i class="fa fa-fix"></i><span>6 rue du Bois Sauvage 91000 Évry</span></li>
 				</ul>
 				
 				</div>

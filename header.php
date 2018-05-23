@@ -26,36 +26,33 @@
 <div id="fixed_header" class="fixed_header page_header"> 
 	<div class="top_header">
 		<div class="site-branding"> 
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img src="<?php bloginfo( 'template_url' ) ?>/img/logo.png" alt="">
-			</a>
+			<div class="logo_container">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img src="<?php bloginfo( 'template_url' ) ?>/img/logo.png" alt="">
+				</a>
+			</div>
 		</div><!-- .site-branding -->
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'blacode' ); ?></button>
 			<?php
 			wp_nav_menu( array(
-			'theme_location' => 'menu-1',
-			'menu_id'        => 'primary-menu',
+				'theme_location' => 'menu-1',
+				'menu_id'        => 'primary-menu',
 			) );
 			?>
 		</nav><!-- #site-navigation --> 
 	</div> 
 </div>
 
+<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'blacode' ); ?></a>
 
-
-
-
-
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'blacode' ); ?></a>
-
-	<header id="masthead" class="site-header">
-	<?php if (is_home()) { ?>
+<header id="masthead" class="site-header">
+<?php if (is_home()) { ?>
 	<?php get_template_part( 'contents/home','header' )  ?>
-	<?php } else { ?>
+<?php } else { ?>
 	<?php get_template_part( 'contents/page','header' )  ?>
-	<?php } ?>
-	
-	</header><!-- #masthead -->
+<?php } ?>
 
-	<div id="content" class="site-content">
+</header><!-- #masthead -->
+
+<div id="content" class="site-content">

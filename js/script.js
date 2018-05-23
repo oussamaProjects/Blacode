@@ -204,6 +204,22 @@ jQuery(document).ready(function(){
       }); 
       
 
+      
+        setTimeout(function() {
+            scrollTo();
+        }, 150);
+
+        function scrollTo(){
+
+            $corp = jQuery('#content .h1').offset().top;
+            jQuery('.scroll-down').click(function(e) {
+                e.preventDefault();
+                jQuery("html, body").animate({
+                    scrollTop: $corp - 100
+                }, 500);
+            });
+        }
+
 });
 
 

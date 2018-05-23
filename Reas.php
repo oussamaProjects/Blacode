@@ -4,7 +4,7 @@ require( 'header.php' );
 $ID = get_the_ID();?>
 
 <?php 
-$args = array('post_type' => 'projet', 'posts_per_page' => 2, 'order' => 'DESC', 'orderby' => 'menu_order', 'post_status' => 'publish');
+$args = array('post_type' => 'projet', 'posts_per_page' => -1, 'order' => 'DESC', 'orderby' => 'menu_order', 'post_status' => 'publish');
 $realisation = new WP_Query( $args ); 
 
 $viwed = $realisation->post_count;

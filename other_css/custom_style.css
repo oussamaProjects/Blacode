@@ -19,3 +19,75 @@
 #wpcf7-f90-p14-o1 .wpcf7-submit:focus, #next-step:focus{
     color:#fff;
 }
+
+/*----------------------------------
+Added by Redouane
+----------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+
+body{
+  font-family: 'Quicksand', sans-serif;
+}
+.page_header .top_header nav ul li a{
+  font-size: 1rem;
+}
+.h1 {
+  font-size: 2.75rem;
+}
+.h2 {
+  line-height: 3rem;
+}
+.rea .description p, p{
+  line-height: 2rem;
+}
+.actu .titre {
+    line-height: 1.75rem;
+}
+.expertises .expertise .description ul{
+  line-height: 2rem;
+}
+
+
+
+
+.actu .image{
+  position: relative;
+}
+
+.actu .image a .hover{
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(../img/zoom_icon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.actu .image a:hover .hover{
+  opacity: 1;
+}
+
+
+
+.scroll-down{ 
+  width: 25px; 
+  height: 45px; 
+	position: absolute;
+	/*background-size: contain;*/
+	background-repeat: no-repeat;
+	bottom: -35px;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	cursor: pointer;
+}
+
+.site-branding .logo_container img{
+  height: 50px;
+}

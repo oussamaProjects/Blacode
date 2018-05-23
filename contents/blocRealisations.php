@@ -38,7 +38,9 @@
                 <div class="offset-md-2 col-md-8">
                     <div class="rea"> 
                         <div class="titre">
-                            <?php the_title(); ?> 
+                            <a href="<?php the_permalink( ) ?>">
+                                <?php the_title(); ?> 
+                            </a>
                         </div> 
                         <div class="description">
                             <?php the_excerpt(); ?>

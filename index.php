@@ -41,8 +41,7 @@ get_header();
 			<div class="offset-md-2 col-md-8 ">
 				<h2>L’essentiel du digital</h2>
 				<p>
-				Chaque jour, nous veillons sur les tendances et les sujets chauds du moment et les partageons avec vous.
-				Chaque jour, nous veillons sur les tendances et les sujets chauds du moment et les partageons avec vous.
+				Nous assurons une veille digitale quotidienne et nous tenons en alerte sur les sujets chauds du moment pour vous informer des actualités clés et adapter nos solutions aux nouvelles exigences et opportunités du marché. 
 				</p>
 			</div>
 		</div>
