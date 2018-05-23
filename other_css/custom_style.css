@@ -91,3 +91,30 @@ body{
 .site-branding .logo_container img{
   height: 50px;
 }
+
+.radio-newsletter-36 label {
+    cursor: pointer;
+}
+
+.radio-newsletter-36 input {
+    visibility: hidden;
+}
+
+span.wpcf7-list-item-label {
+    border: 1px solid;
+    display: inline-block;
+    padding: 0 15px;
+    border-color: #777;
+    color: #777;
+}
+
+.radio-newsletter-36 input:checked+span {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.wpcf7-list-item {
+    margin-left: 0;
+	margin-right: 36px;
+}
