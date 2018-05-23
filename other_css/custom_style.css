@@ -19,3 +19,30 @@
 #wpcf7-f90-p14-o1 .wpcf7-submit:focus, #next-step:focus{
     color:#fff;
 }
+
+.radio-newsletter-36 label {
+    cursor: pointer;
+}
+
+.radio-newsletter-36 input {
+    visibility: hidden;
+}
+
+span.wpcf7-list-item-label {
+    border: 1px solid;
+    display: inline-block;
+    padding: 0 15px;
+    border-color: #777;
+    color: #777;
+}
+
+.radio-newsletter-36 input:checked+span {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+span.wpcf7-list-item {
+    margin-left: 0;
+    margin-right: 36px;
+}
