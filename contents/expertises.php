@@ -10,10 +10,10 @@ if($expertises) { ?>
                 <section class="expertises"> 
                     <?php while($expertises->have_posts()) : $expertises->the_post(); ?>
                         <div class="expertise" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');"> 
-                            <a href="<?php echo get_permalink();?>">
+                            <!-- <a href="<?php echo get_permalink();?>"> -->
                                 <div class="titre"><?php the_title(); ?></div>
                                 <div class="description"><? the_content(); ?></div>
-                            </a> 
+                            <!-- </a>  -->
                         </div> 
                     <?php endwhile; ?>
                     <?php wp_reset_postdata(); ?>

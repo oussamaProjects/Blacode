@@ -1,5 +1,8 @@
 jQuery(document).ready(function(){
 
+    setTimeout(function(){
+        jQuery('.home-video-btn').css('display', 'block');
+    }, 45000);
  
     jQuery('#sliderActus').owlCarousel({
             
@@ -48,13 +51,13 @@ jQuery(document).ready(function(){
     });
     
     jQuery('#slider-nav-prev').click(function() {
-        jQuery('.realisation-slider-1').trigger('next.owl.carousel');
-        jQuery('.realisation-slider-2').trigger('next.owl.carousel');
+        jQuery('.realisation-slider-1').trigger('prev.owl.carousel');
+        jQuery('.realisation-slider-2').trigger('prev.owl.carousel');
     });
 
     jQuery('#slider-nav-next').click(function() {
-        jQuery('.realisation-slider-1').trigger('prev.owl.carousel');
-        jQuery('.realisation-slider-2').trigger('prev.owl.carousel');
+        jQuery('.realisation-slider-1').trigger('next.owl.carousel');
+        jQuery('.realisation-slider-2').trigger('next.owl.carousel');
     });
 
     if(jQuery('#wpcf7-f90-p14-o1').length){

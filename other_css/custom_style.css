@@ -125,3 +125,16 @@ footer ul.footer-info li a{
 #wpcf7-f90-p14-o1 .wpcf7-submit:hover, #next-step:hover{
     color: #fff;
 }
+
+.home-video-btn{
+    position: absolute;
+    left: 43%;
+    top: 57.5%;
+    z-index: 10;
+    background-color: #000;
+    color: #000;
+    width: 264px;
+    height: 65px;
+    opacity: 0;
+    display: none;
+}
