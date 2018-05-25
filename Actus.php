@@ -3,7 +3,7 @@
 require( 'header.php' );  ?>
 
 <?php 
-$args = array('posts_per_page' => 8, 'order' => 'DESC', 'orderby' => 'menu_order', 'post_status' => 'publish');
+$args = array('posts_per_page' => 8, /*'order' => 'DESC', 'orderby' => 'menu_order',*/ 'post_status' => 'publish');
 $Actualites = new WP_Query( $args ); 
 
 $viwed = $Actualites->post_count;

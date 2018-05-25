@@ -16,6 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.jpg" />
 
 	<?php wp_head(); ?>
 </head>
@@ -28,7 +29,7 @@
 		<div class="site-branding"> 
 			<div class="logo_container">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<img src="<?php bloginfo( 'template_url' ) ?>/img/logo.png" alt="">
+					<img src="<?php bloginfo( 'template_url' ) ?>/img/symbole.png" alt="">
 				</a>
 			</div>
 		</div><!-- .site-branding -->
@@ -47,7 +48,7 @@
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'blacode' ); ?></a>
 
 <header id="masthead" class="site-header">
-<?php if (is_home()) { ?>
+<?php if (is_home() || is_404()) { ?>
 	<?php get_template_part( 'contents/home','header' )  ?>
 <?php } else { ?>
 	<?php get_template_part( 'contents/page','header' )  ?>

@@ -63,6 +63,17 @@ if($header_image){ ?>
 
 <?php
 $next_post = get_next_post();
+if (empty($next_post)) {
+	$args = array(
+		'posts_per_page' => 1,
+		'post_type' => 'post',
+		'order' => 'ASC'
+	);
+
+	$first = new WP_Query($args);
+	if($first->have_posts())
+		$next_post = $first->post;
+	}
 if (!empty( $next_post )): ?>
 
 <?php $header_image = get_field('header_image', $next_post->ID); ?>

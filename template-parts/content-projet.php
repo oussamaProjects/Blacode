@@ -28,9 +28,7 @@
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
 						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-					</header><!-- .entry-header -->
-
-					<?php blacode_post_thumbnail(); ?>
+					</header><!-- .entry-header --> 
 
 					<div class="entry-content">
 						<?php
@@ -87,9 +85,19 @@
 			</div>
 		</div>
 	</div>
-
 	<?php
 	$next_post = get_next_post();
+	if (empty($next_post)) {
+	$args = array(
+		'posts_per_page' => 1,
+		'post_type' => 'projet',
+		'order' => 'ASC'
+	);
+	
+	$first = new WP_Query($args);
+	if($first->have_posts())
+		$next_post = $first->post;
+	}
 	if (!empty( $next_post )): ?>
 
 	<?php $rea_image_header = get_field('rea_image_header', $next_post->ID); ?>

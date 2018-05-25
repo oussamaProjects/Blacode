@@ -122,7 +122,7 @@ add_action( 'widgets_init', 'blacode_widgets_init' );
 function blacode_scripts() {
 
 	
-	wp_enqueue_style( 'blacode-font-roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' );
+	wp_enqueue_style( 'blacode-font-Quicksand', 'https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700' );
 	wp_enqueue_style( 'blacode-font-alegreya-sans', 'https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700i' );
 	wp_enqueue_style( 'blacode-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'blacode-style-2', 		get_template_directory_uri() . '/other_css/custom_style.css' );
@@ -135,11 +135,6 @@ function blacode_scripts() {
 	wp_enqueue_script( 'owl.carousel', 			get_template_directory_uri() . '/js/libs/owl.carousel/dist/owl.carousel.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'typed.js', 				get_template_directory_uri() . '/js/libs/typed.js/lib/typed.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'blacode-navigation', 	get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	if(is_home()){
-		wp_enqueue_script( 'home-svg-animation-lottie', 		get_template_directory_uri() . '/animsvg/scripts/lottie.js', array(), '20151215', true );
-		wp_enqueue_script( 'home-svg-animation-index', 		get_template_directory_uri() . '/animsvg/scripts/index.js', array(), '20151215', true );
-	}
 
 	wp_enqueue_script( 'blacode-script', 		get_template_directory_uri() . '/js/script.js', array(), '20151215', true );
 

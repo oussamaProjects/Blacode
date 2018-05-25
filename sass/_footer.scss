@@ -6,22 +6,28 @@ footer {
 	padding: oe_rem(26px) 0;
 	ul.footer-info{
 		list-style: none;
+		height: 100%;
 		padding: 0 !important;
 		margin: 0 !important;
-		@include flex(center, flex-end, row);
+		@include flex(center, center, row);
 		li{
-			margin: 0 oe_rem(10px);
+			margin: 0 ;
 			color: $white;
-			a{
+			&:not(:last-child):after{
+				content: '-';
+				display: inline-block;
+				margin: 0 8px;
+			}
+			a{ 
 				color: $white;
 				margin: 0 oe_rem(4px);
-				font-size: oe_rem(18px);
-				@include transition();
+				font-size: oe_rem(18px); 
+				@include transition(all, .25s, ease-in-out);
 				&:hover,
 				&:active,
 				&:focus{
-					color: $white;
-					text-decoration: underline; 
+					padding-bottom: oe_rem(3px);
+					border-bottom: 1px solid white;
 				}
 			}
 			span{
@@ -37,3 +43,4 @@ footer {
 	}
 
 }
+

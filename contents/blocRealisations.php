@@ -24,7 +24,7 @@
     </div>
 
     <?php while ( $realisation->have_posts() ) : $realisation->the_post(); $i++; ?>
-       
+       <div class="project-row">
         <?php 
         $rea_image_header = get_field('rea_image_header'); 
         if($rea_image_header){ ?> 
@@ -53,8 +53,7 @@
                 <div class="clearfix"></div>
             </div>
         </div>
-
-
+        </div>
     <?php endwhile; ?>
 
 

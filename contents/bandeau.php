@@ -3,9 +3,11 @@ if( isset($call_to_action) && !empty($call_to_action)){
 $post = $call_to_action;
 setup_postdata( $post ); 
 
-$background_image = get_field('background_image');  ?> 	
+$background_image = get_field('background_image');  
+$textColor = get_field('couleur_du_texte');
+?> 	
 
-<section class="bandeau" <?php if(isset($background_image)){ ?> style="background-image: url(<?php echo $background_image['url']; ?>);" <?php } ?>>
+<section class="bandeau<?php if($textColor == 'Blanc') echo ' text-white'; ?>" <?php if(isset($background_image)){ ?> style="background-image: url(<?php echo $background_image['url']; ?>);" <?php } ?>>
 	<div class="info">
 		<div class="container">
 			<div class="row">
@@ -35,20 +37,16 @@ $background_image = get_field('background_image');  ?>
 					<?php } ?> 
 				</div>
 
-				<?php if( $ID == 10 ){ ?>
+				<?php if( $ID == 10 || is_tax('cat_projet') ){ ?>
 					<div class="col-md-10 offset-md-1">
 						<div class="cats">
 							<ul>
-								<li><a href="#"> Dispositif Marketing </a> </li> 
-								<li><a href="#"> Mobile </a> </li> 
-								<li><a href="#"> E-CRM </a> </li> 
-								<li><a href="#"> Campagne </a> </li> 
-								<li><a href="#"> Stratégie de marque </a> </li> 
-								<li><a href="#"> Social média </a> </li> 
-								<li><a href="#"> Infographie </a> </li> 
-								<li><a href="#"> Motion Design </a> </li> 
-								<li><a href="#"> Site </a> </li> 
-								<li><a href="#"> Événementiel </a> </li> 
+								<?php  $args = array( 
+									'title_li' => '',
+									'taxonomy' => 'cat_projet',
+									'hide_empty' => false,
+								);
+								wp_list_categories( $args ); ?>
 							</ul>
 						</div>
 					</div>

@@ -24,11 +24,14 @@
 			</div>
 		</div>
 	</div>
-
-	<div id="bm"></div>
-		
-	<div class="scroll-down">
-		<i class="fas fa-chevron-down"></i>
-	</div>
-
 </div>
+<?php if (!is_404()) { ?>
+<!-- poster="<?php echo get_template_directory_uri() . '/img/home_video_poster.jpg'; ?>" -->
+<video class="home-video" muted autoplay>
+	<source src="<?php echo wp_get_attachment_url(293); ?>" type="video/mp4">
+</video>
+<div class="scroll-down">
+	<img src="<?php echo get_template_directory_uri() . '/img/angle_bottom.png'; ?>" alt="Suivant">
+</div>
+
+<?php } ?>

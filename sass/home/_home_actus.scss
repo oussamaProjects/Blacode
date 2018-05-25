@@ -1,5 +1,5 @@
 .sliderActus{
-	padding: oe_rem(50px) 0;
+	padding: oe_rem(50px) oe_rem(20px);
 	.sliderActus{
 		.actu{
 			.image{
@@ -61,22 +61,42 @@
 		line-height: oe_rem(30px);
 	}
 }
-.actu{
+.actu{ 
 	margin-bottom: oe_rem(40px);
 	.image{
-		height: oe_rem(495px);
+		position: relative;
+		// height: oe_rem(495px);
 		width: 100%;
 		background-color: $main-color;
+		a{
+			.hover{
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				opacity: 0;
+				transition: opacity .5s ease;
+				background-color: rgba(0, 0, 0, 0.5);
+				background-image: url(./img/zoom_icon.png);
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			&:hover .hover{
+				opacity: 1;
+			}
+		}
 		img{
-			min-width: 100%;
-			max-width: initial;
-			min-height: 100%;
-			max-height: initial;
+			// min-width: 100%;
+			// max-width: initial;
+			// min-height: 100%;
+			// max-height: initial;
 		}
 	}
 	.titre{
 		font-size: oe_rem(18px);
-		line-height: oe_rem(50px);
+		line-height: oe_rem(28px);
 		font-weight: bold;
 		padding-top: oe_rem(10px);
 		text-transform: uppercase;
